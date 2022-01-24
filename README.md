@@ -4,6 +4,12 @@ R1	Description of your website, including:
 - Functionality / features
 - Target audience
 - Tech stack
+    React
+    Ruby on rails
+    Postgresql
+    Heroku
+    AWS S3 image hosting
+
     Will be refined
 
 R2	Dataflow Diagram
