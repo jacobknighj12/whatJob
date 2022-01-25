@@ -1,7 +1,9 @@
 # whatJob - T3A2 - Full Stack Application
 
 Jacob Knight -
+
 Kate Beaumont - Cam022111 
+
 Luke Gunders - 
 
 ## WhatJob - Career Advice from Career Professionals!
@@ -10,7 +12,7 @@ The purpose of the website is to provide career guidance for those in primary an
 
 
 - Functionality / features
-To post, a user must register. The registration will be done by wya of xxxxx. Authorisation will be along with authentication.
+To post, a user must register. The registration will be done by way of [TBD]. Authorisation will be along with authentication.
 
 Thes posts will idenfify the obligations in the job, possuble career paths, an ordinary day in the job, expected salary, how difficult the professional rates their job, work life balance. Thse fields will eb character limited, but the professional can write a longer 'deep dive' post.
 
@@ -20,8 +22,7 @@ These posts will be organised by way of categories. The categories will be drawn
 
 The posts can be upvoted and downvoted by logged in users, ordering by way of most upvoted post to show those seeking information about a particular occupation the most relevant posts.
 
-There will also be a report feature to send a message to the website administrator for posts which will enable reporting by logged in  users.
-
+There will also be a report feature to send a message to the website administrator for posts which will enable reporting by logged in users.
 
 
 - Target audience
@@ -31,10 +32,15 @@ There are websites that provide information to school leavers about potential ca
 
 
 - Tech stack
+    
     React
+    
     Ruby on rails
+    
     Postgresql
+    
     Heroku
+    
     AWS S3 image hosting
 
     Will be refined
