@@ -7,6 +7,8 @@ Kate Beaumont - Cam022111
 Luke Gunders - 
 
 ## WhatJob - Career Advice from Career Professionals!
+- Who for
+
 - Purpose
 The purpose of the website is to provide career guidance for those in primary and high school education. The content is to be written by way of seperate posts by professionals in the field. These post will be sorted through categories. 
 
