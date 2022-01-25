@@ -16,7 +16,7 @@ The purpose of the website is to provide career guidance for those in primary an
 - Functionality / features
 To post, a user must register. The registration will be done by way of [TBD]. Authorisation will be along with authentication.
 
-Thes posts will idenfify the obligations in the job, possuble career paths, an ordinary day in the job, expected salary, how difficult the professional rates their job, work life balance. Thse fields will eb character limited, but the professional can write a longer 'deep dive' post.
+Thes posts will idenfify the obligations in the job, possuble career paths, an ordinary day in the job, expected salary, how difficult the professional rates their job, work life balance. Thse fields will be character limited, but the professional can write a longer 'deep dive' post.
 
 
 
