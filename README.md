@@ -1,8 +1,35 @@
-# whatJob
-R1	Description of your website, including:
+# whatJob - T3A2 - Full Stack Application
+
+Jacob Knight -
+Kate Beaumont - Cam022111 
+Luke Gunders - 
+
+## WhatJob - Career Advice from Career Professionals!
 - Purpose
+The purpose of the website is to provide career guidance for those in primary and high school education. The content is to be written by way of seperate posts by professionals in the field. These post will be sorted through categories. 
+
+
 - Functionality / features
+To post, a user must register. The registration will be done by wya of xxxxx. Authorisation will be along with authentication.
+
+Thes posts will idenfify the obligations in the job, possuble career paths, an ordinary day in the job, expected salary, how difficult the professional rates their job, work life balance. Thse fields will eb character limited, but the professional can write a longer 'deep dive' post.
+
+
+
+These posts will be organised by way of categories. The categories will be drawn from other job search websites.
+
+The posts can be upvoted and downvoted by logged in users, ordering by way of most upvoted post to show those seeking information about a particular occupation the most relevant posts.
+
+There will also be a report feature to send a message to the website administrator for posts which will enable reporting by logged in  users.
+
+
+
 - Target audience
+THe target audience for this app is primary and high school students, but might also assist those who are also looking to change career.
+
+There are websites that provide information to school leavers about potential careers, but they are not written by the industry professionals. There is also websites that provide information on the experiences of employees at particular employers (i.e. Glassdoor) But it is regarding specific employees and not related to professions themselves.
+
+
 - Tech stack
     React
     Ruby on rails
