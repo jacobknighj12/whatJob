@@ -41,6 +41,8 @@ There are websites that provide information to school leavers about potential ca
     
     Postgresql
     
+    Devise
+    
     Heroku
     
     AWS S3 image hosting
