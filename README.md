@@ -62,34 +62,101 @@ R3	Application Architecture Diagram
     link here
 
 R4	User Stories
-    link here
+    ![Picture](./Screenshots/1.JPG)
+    ![Picture](./Screenshots/2.JPG)
+    ![Picture](./Screenshots/3.JPG)
+    ![Picture](./Screenshots/4.JPG)
+    ![Picture](./Screenshots/5.JPG)
+    ![Picture](./Screenshots/6.JPG)
+    ![Picture](./Screenshots/7.JPG)
+    ![Picture](./Screenshots/8.JPG)
+    ![Picture](./Screenshots/9.JPG)
+    ![Picture](./Screenshots/10.JPG)
+    ![Picture](./Screenshots/11.JPG)
+    ![Picture](./Screenshots/12.JPG)
+    ![Picture](./Screenshots/13.JPG)
+    ![Picture](./Screenshots/14.JPG)
+    ![Picture](./Screenshots/15.JPG)
+    ![Picture](./Screenshots/16.JPG)
+    ![Picture](./Screenshots/17.JPG)
+    ![Picture](./Screenshots/18.JPG)
+    ![Picture](./Screenshots/19.JPG)
+    ![Picture](./Screenshots/20.JPG)
+    ![Picture](./Screenshots/21.JPG)
+    ![Picture](./Screenshots/22.JPG)
+    ![Picture](./Screenshots/23.JPG)
+    ![Picture](./Screenshots/24.JPG)
+    ![Picture](./Screenshots/25.JPG)
+    ![Picture](./Screenshots/26.JPG)
+    ![Picture](./Screenshots/27.JPG)
+    ![Picture](./Screenshots/28.JPG)
+    ![Picture](./Screenshots/29.JPG)
+    ![Picture](./Screenshots/30.JPG)
+    ![Picture](./Screenshots/31.JPG)
+    ![Picture](./Screenshots/32.JPG)
+    ![Picture](./Screenshots/32.JPG)
+    ![Picture](./Screenshots/33.JPG)
+    ![Picture](./Screenshots/34.JPG)
+    ![Picture](./Screenshots/35.JPG)
+    ![Picture](./Screenshots/36.JPG)
+    ![Picture](./Screenshots/37.JPG)
+    ![Picture](./Screenshots/38.JPG)
+    ![Picture](./Screenshots/39.JPG)
+    ![Picture](./Screenshots/40.JPG)
+    ![Picture](./Screenshots/41.JPG)
+    ![Picture](./Screenshots/MVP_list.JPG)
 
 R5	Wireframes for multiple standard screen sizes, created using industry standard software
     link here
 
 R6	Screenshots of your Trello board throughout the duration of the project
-    link to each screen shot
+    ![Picture](./Screenshots/1.JPG)
+    ![Picture](./Screenshots/2.JPG)
+    ![Picture](./Screenshots/3.JPG)
+    ![Picture](./Screenshots/4.JPG)
+    ![Picture](./Screenshots/5.JPG)
+    ![Picture](./Screenshots/6.JPG)
+    ![Picture](./Screenshots/7.JPG)
+    ![Picture](./Screenshots/8.JPG)
+    ![Picture](./Screenshots/9.JPG)
+    ![Picture](./Screenshots/10.JPG)
+    ![Picture](./Screenshots/11.JPG)
+    ![Picture](./Screenshots/12.JPG)
+    ![Picture](./Screenshots/13.JPG)
+    ![Picture](./Screenshots/14.JPG)
+    ![Picture](./Screenshots/15.JPG)
+    ![Picture](./Screenshots/16.JPG)
+    ![Picture](./Screenshots/17.JPG)
+    ![Picture](./Screenshots/18.JPG)
+    ![Picture](./Screenshots/19.JPG)
+    ![Picture](./Screenshots/20.JPG)
+    ![Picture](./Screenshots/21.JPG)
+    ![Picture](./Screenshots/22.JPG)
+    ![Picture](./Screenshots/23.JPG)
+    ![Picture](./Screenshots/24.JPG)
+    ![Picture](./Screenshots/25.JPG)
+    ![Picture](./Screenshots/26.JPG)
+    ![Picture](./Screenshots/27.JPG)
+    ![Picture](./Screenshots/28.JPG)
+    ![Picture](./Screenshots/29.JPG)
+    ![Picture](./Screenshots/30.JPG)
+    ![Picture](./Screenshots/31.JPG)
+    ![Picture](./Screenshots/32.JPG)
+    ![Picture](./Screenshots/32.JPG)
+    ![Picture](./Screenshots/33.JPG)
+    ![Picture](./Screenshots/34.JPG)
+    ![Picture](./Screenshots/35.JPG)
+    ![Picture](./Screenshots/36.JPG)
+    ![Picture](./Screenshots/37.JPG)
+    ![Picture](./Screenshots/38.JPG)
+    ![Picture](./Screenshots/39.JPG)
+    ![Picture](./Screenshots/40.JPG)
+    ![Picture](./Screenshots/41.JPG)
+    ![Picture](./Screenshots/MVP_list.JPG)
 
 
-* Using Pull Requests
-* Focus on a few core features
-    * Sign in/sign up/sign out
-    * CRUD
-        * Create
-        * Update
-        * Read
-        * Delete
-    * Something else
-* Do the full SDLC
-    * Getting the requirements right
-        * Absolute minimum to achieve the purpose
-        * No nice to haves
-    * Listing your assumptions
-        * i.e. %95 of our users will access via a Android mobile device
-        * We have to support IE11 because one important client has it in their SOE
-    * Acceptance Criteria (Might be the scenarios at the end of Part II)
+
 * Tech Stack
-    * Example
         * RoR API backend
         * React frontend
         * Postgresql DB
@@ -113,16 +180,4 @@ R6	Screenshots of your Trello board throughout the duration of the project
     * High level hosting
         * Heroku
         * AWS
-        * Containerize
 
-
-Use scenarios like this (non implementation specific):
-Scenario Admin user adds new job description 
-Given I am an admin user
-When I add a new job description in the WYSIWYG
-And I save the description
-Then it will be saved into the system
-
-
-
-Use fibonacci 1, 2, 3, 5, 8, 13, 21, 35
