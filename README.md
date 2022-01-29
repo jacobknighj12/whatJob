@@ -68,6 +68,12 @@ Luke Gunders - cam022103
 
 ### R4 User Stories
 
+The user stories for this project were showing our way of implementing the Agile
+Methodology using trello, dates, difficulties, assigning each card, with each card
+having a full user story for it and having requirements for each card to be moved between 
+sections and having daily standup's at 2PM after classes as well as general discussion on any
+details that needed ironing out.
+
 ![Picture](./Screenshots/1.JPG)
 ![Picture](./Screenshots/2.JPG)
 ![Picture](./Screenshots/3.JPG)
@@ -172,6 +178,12 @@ Figure 28. Tablet and Mobile version of new Deep Dive page
 ![Picture](./Screenshots/wireframes/NewDeepDive_Tab-Mob.png)
 
 ### R6 Screenshots of your Trello board throughout the duration of the project
+
+    Throughout the planning phase we were constantly aware that our scope must be limited
+    and were adding cards from a joint google document that we had drafts of that were, added in or
+    excluded for extra content if we have time for it.
+    As the method was gradually introduced it was further and further implemented in each of the cards 
+    with more details being added like the fibonacci difficulties and dates.
 
 ![Picture](./Screenshots/1.JPG)
 ![Picture](./Screenshots/2.JPG)
