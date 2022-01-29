@@ -9,17 +9,22 @@ Luke Gunders - cam022103
 ## WhatJob - Career Advice from Career Professionals!
 
 - Target audience
+
 This App has two audiences; one who contributes content and another who consumes it.
+
 The consumers of the content are targeted towards students, primarily high school students, but it may also help adults who are looking at a career change. While there is a lot of general advice about professions, there aren’t any other websites in Australia which provide information seeking career guidance or information on a career change with information written by those in the career. As it is written by people who work in the profession/s, it will contain straightforward information of the day-to-day experiences of those with direct experience and what to expect working within that industry.
+
 The contributors of the content are professionals that would like to share their experiences and expertise with said students. There are a lot of people in industry who enjoy mentoring and assisting others with building their career, and this website is a perfect opportunity for them to help others.
 
 
 - Purpose
+
   The purpose of the website is to provide career guidance for those in mainly primary and high school education. Schools are academically focused and don’t tend to introduce students to the breadth and scope of possible careers. Young people consume more media than ever before, and hear messages that glorify some sectors, but never hear about the downsides of those occupations. In contrast, there are many less ‘glamourous’ roles that many workers may love that don’t get media exposure. At present, there is no way for students to fully explore their work opportunities with proper explanations of all  complexities of each job.
   The content is to be written by way of separate posts by professionals in each field. These posts will be sorted through categories to allow ease of access and useability to encourage use and exploration of different avenues.
 
 
 - Functionality / features
+
   To post, a user must register. The registration will be done by way of token Authorization will be along with authentication.
 
   These posts will identify the obligations in the job as well as this list of sections:
@@ -42,13 +47,21 @@ The contributors of the content are professionals that would like to share their
   There will also be a report feature to send a message to the website administrator for posts which will enable reporting by logged in users.
 
 - Tech stack
+
   React
+
   Ruby on rails
+
   Postgresql
+
   Devise
+
   Heroku
+
   Netlify
+
   Bootstrap
+
   AWS S3 image hosting
 
 ### R2 Dataflow Diagram
@@ -67,9 +80,9 @@ DFD Level 2 Selective Diagrams
 ### R4 User Stories
 
 The user stories for this project were showing our way of implementing the Agile
-Methodology using trello, dates, difficulties, assigning each card, with each card
+Methodology using Trello, dates, difficulties, assigning each card, with each card
 having a full user story for it and having requirements for each card to be moved between 
-sections and having daily standup's at 2PM after classes as well as general discussion on any
+sections and having daily standups at 2.00PM after classes as well as general discussion on any
 details that needed ironing out.
 
 ![Picture](./docs/1.JPG)
