@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  scope '/api' do
+    get '/posts', to: 'posts#index'
+    post '/posts', to: 'posts#index'
+    get '/posts/:id', to: 'posts#show'
+    get '/posts/:id', to: 'posts#update'
+    delete '/posts/:id', to: 'posts#destroy'
+  end
+
+
 end
