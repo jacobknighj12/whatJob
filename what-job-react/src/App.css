@@ -34,3 +34,8 @@
     transform: rotate(360deg);
   }
 }
+select{
+  width: 25rem;
+  height: 2rem;
+  font-size: 20px;
+}
