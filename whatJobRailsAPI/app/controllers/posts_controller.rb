@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-before_action: :set_post, only: [:show, :update]
+before_action :set_post, only: [:show, :update, :destroy]
     
     def index
         @posts = Post.all
@@ -12,6 +12,7 @@ before_action: :set_post, only: [:show, :update]
             render json: @post.errors, status: :unprocessable_entity
         else
             render json: @post, status: 201
+        end
     end
 
     def show
@@ -37,8 +38,9 @@ before_action: :set_post, only: [:show, :update]
 
     private
     def post_params
-        params.permit(:categories_id, :title, :intro, :day_to_day, :career_path, :expected_salary_range_from, :expected_salary_range_to, :difficulty, :job_security, :industry_growth, :work_life_balance, :role_details, :job_description)
-
+        params.permit(:user_id, :category_id, :title, :intro, :day_to_day, :career_path, :expected_salary_range_from, :expected_salary_range_to, :difficulty, :job_security, :industry_growth, :work_life_balance, :role_details, :job_description)
+    end
+    
     def set_post
         begin
         @post = Post.find(params[:id])
