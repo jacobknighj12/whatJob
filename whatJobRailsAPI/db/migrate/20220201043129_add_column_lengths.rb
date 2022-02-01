@@ -1,4 +1,4 @@
-class AddRestrictionsToCategoriesAndPostsAndKeys < ActiveRecord::Migration[6.0]
+class AddColumnLengths < ActiveRecord::Migration[6.0]
   def change
     change_column :posts, :title, limit: 50
     change_column :posts, :intro, limit: 300
@@ -17,8 +17,5 @@ class AddRestrictionsToCategoriesAndPostsAndKeys < ActiveRecord::Migration[6.0]
     
     change_column :posts, :role_details, limit: 2000
     change_column :posts, :job_description, limit: 2000
-
-
-    add_reference :posts, :categories, null:false, foreign_key: true
   end
 end
