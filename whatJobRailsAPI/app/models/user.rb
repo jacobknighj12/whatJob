@@ -3,7 +3,6 @@ class User < ApplicationRecord
          :jwt_authenticatable,
          :registerable,
          jwt_revocation_strategy: JwtDenylist
-  has_secure_password
 
-validates :username, presence: true, uniqueness: true
+         validates :email, presence: true, uniqueness: true
 end
