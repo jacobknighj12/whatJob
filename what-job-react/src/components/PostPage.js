@@ -1,6 +1,17 @@
-import React from "react";
+import { SettingsCellOutlined } from "@mui/icons-material";
+import React, { useState } from "react";
 
-export function JobPosts() {
+export function JobPosts(props) {
+  const [likes, setLikes] = useState(0);
+  const [disLikes, setDisLikes] = useState(0);
+
+  const handleIncrementLikes = () => {
+    setLikes((prevLikes) => prevLikes + 1);
+  };
+  const handleIncrementDisLikes = () => {
+    setDisLikes((prevDisLikes) => prevDisLikes + 1);
+  };
+
   return (
     <>
       <div>
@@ -10,9 +21,14 @@ export function JobPosts() {
         <linl>Link to Deep Dive for post</linl>
       </div>
       <div>
-        <button>(Bootstrap thumbs up)</button>
-        <button>(Bootstrap thumbs up)</button>
+        <button onClick={handleIncrementLikes}>(Bootstrap thumbs up)</button>
+        <h5>Count is {likes}</h5>
+        <button onClick={handleIncrementDisLikes}>(Bootstrap thumbs up)</button>
+        <h5>Count is {disLikes}</h5>
       </div>
+      <button onClick={() => setLikes(0)}></button>
+      <div></div>
+      <button onClick={() => setDisLikes(0)}></button>
       <div>
         <button>Report</button>
       </div>
