@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   scope '/api' do
     get '/posts', to: 'posts#index'
     post '/posts', to: 'posts#index'
