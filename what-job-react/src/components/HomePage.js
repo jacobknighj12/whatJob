@@ -4,7 +4,7 @@ export function HomePage() {
         <div>
             {/* hero image will need a fetch call helper */}
             {/* logo will be imported later */}
-            <img src='whatJob-logo.png' style={{ width: 600 }}></img>
+            <img src='logo192.JPG' style={{ width: 250 }}></img>
             <img src=''></img>
             <div className='heading'>
                 <hr></hr>
