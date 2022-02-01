@@ -1,8 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { HomePage } from "./components/HomePage";
-import { NavBar } from "./components/NavBar";
-import { ContactUs } from "./components/ContactUs";
 
 import './App.css';
 import { HomePage } from './components/HomePage';
@@ -20,8 +15,6 @@ function App() {
       </header>
       <HomePage />
       <ContactUs />
-      <LoginPage />
-      <SignupPage />
       <CategoriesPage />
       <LoginPage />
       <SignupPage />
