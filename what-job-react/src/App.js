@@ -1,18 +1,16 @@
-import logo from "./logo.svg";
+import React, { useContext, useState } from 'react'
 import "./App.css";
-import { HomePage } from "./components/HomePage";
-import { NavBar } from "./components/NavBar";
 import { ContactUs } from "./components/ContactUs";
-
-import './App.css';
 import { HomePage } from './components/HomePage';
 import { NavBar } from './components/NavBar';
 import { LoginPage } from './components/LoginPage';
 import { SignupPage } from './components/SignupPage';
 import { CategoriesPage } from './components/CategoriesPage';
 import { NewPostPage } from './components/NewPostPage';
+import { AccountPage } from "./components/AccountPage";
 
 function App() {
+  // const [darkMode, setDarkMode] = useContext(false)
   return (
     <div className="App">
       <header className="App-header">
@@ -23,12 +21,9 @@ function App() {
       <LoginPage />
       <SignupPage />
       <CategoriesPage />
-      <LoginPage />
-      <SignupPage />
-      <CategoriesPage />
       <NewPostPage />
       <ContactUs />
-
+      <AccountPage />
     </div>
   );
 }
