@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_045406) do
+ActiveRecord::Schema.define(version: 2022_02_01_100932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(version: 2022_02_01_045406) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "jwt_denylist", force: :cascade do |t|
+    t.string "jti", null: false
+    t.datetime "exp", null: false
+    t.index ["jti"], name: "index_jwt_denylist_on_jti"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -34,12 +40,14 @@ ActiveRecord::Schema.define(version: 2022_02_01_045406) do
     t.string "work_life_balance"
     t.decimal "upvotes"
     t.decimal "downvotes"
-    t.string "role_details"
-    t.string "job_description"
+    t.text "role_details"
+    t.text "job_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "categories_id", null: false
+    t.bigint "users_id", null: false
     t.index ["categories_id"], name: "index_posts_on_categories_id"
+    t.index ["users_id"], name: "index_posts_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,4 +63,5 @@ ActiveRecord::Schema.define(version: 2022_02_01_045406) do
   end
 
   add_foreign_key "posts", "categories", column: "categories_id"
+  add_foreign_key "posts", "users", column: "users_id"
 end
