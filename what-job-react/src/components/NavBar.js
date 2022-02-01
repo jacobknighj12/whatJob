@@ -7,7 +7,6 @@ export function NavBar() {
             <button>Login/Signup</button>
             <button>Categories</button>
             <button>Contact us</button>
-            <text></text>
         </div>
     )
 }
