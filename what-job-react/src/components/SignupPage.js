@@ -9,9 +9,9 @@ export function SignupPage() {
                 <input></input>
                 <label>Password</label>
                 <input></input>
-                <button>Login</button>
+                <button>Signup</button>
             </form>
-            <button>Signup</button>
+            <button>Login</button>
         </div>
     )
 }
