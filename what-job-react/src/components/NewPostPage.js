@@ -1,6 +1,18 @@
-import React from 'react'
-
+// Import React dependencies.
+import React, { useState } from 'react'
+// Import the Slate editor factory.
+import { createEditor } from 'slate'
+// Import the Slate components and React plugin.
+import { Slate, Editable, withReact } from 'slate-react'
 export function NewPostPage() {
+    const [editor] = useState(() => withReact(createEditor()))
+    // Add the initial value when setting up our state.
+    const [value, setValue] = useState([
+        {
+            type: 'paragraph',
+            children: [{ text: 'This text is editable click me!' }],
+        },
+    ])
     return (
         <div>
             <h2>New post</h2>
@@ -10,12 +22,7 @@ export function NewPostPage() {
                     value={value}
                     onChange={newValue => setValue(newValue)}
                 >
-                    <Toolbar>
-                        <MarkButton format="bold" icon="format_bold" />
-                        <MarkButton format="italic" icon="format_italic" />
-                        <MarkButton format="underline" icon="format_underlined" />
-                        <MarkButton format="code" icon="code" />
-                    </Toolbar>
+
                     <Editable />
                 </Slate>
                 <label>Role title</label>
