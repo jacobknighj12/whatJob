@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import App from "../App";
 
 export function ContactUs(props) {
   const [values, setValues] = useState({
