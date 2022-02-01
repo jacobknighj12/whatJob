@@ -14,12 +14,13 @@ function App() {
         <NavBar />
       </header>
       <HomePage />
-
+      <LoginPage />
+      <SignupPage />
+      <CategoriesPage />
       <LoginPage />
       <SignupPage />
       <CategoriesPage />
       <NewPostPage />
-
       <ContactUs />
 
     </div>
