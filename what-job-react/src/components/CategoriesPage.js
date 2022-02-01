@@ -17,13 +17,7 @@ export function CategoriesPage() {
     ])
     return (
         <div>
-            <Slate
-                editor={editor}
-                value={value}
-                onChange={newValue => setValue(newValue)}
-            >
-                <Editable />
-            </Slate>
+
             <form>
 
                 {/* does this need to be in a form? this will need to be majorities filled in by a api call into a 
