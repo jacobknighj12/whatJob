@@ -1,3 +1,4 @@
+
 import React, { useContext, useState } from 'react'
 import "./App.css";
 import { ContactUs } from "./components/ContactUs";
@@ -18,8 +19,6 @@ function App() {
       </header>
       <HomePage />
       <ContactUs />
-      <LoginPage />
-      <SignupPage />
       <CategoriesPage />
       <NewPostPage />
       <ContactUs />
