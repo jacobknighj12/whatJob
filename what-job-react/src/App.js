@@ -19,6 +19,8 @@ function App() {
       </header>
       <HomePage />
       <ContactUs />
+      <LoginPage />
+      <SignupPage />
       <CategoriesPage />
       <NewPostPage />
       <ContactUs />
