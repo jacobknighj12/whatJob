@@ -5,6 +5,19 @@ export function NewPostPage() {
         <div>
             <h2>New post</h2>
             <form>
+                <Slate
+                    editor={editor}
+                    value={value}
+                    onChange={newValue => setValue(newValue)}
+                >
+                    <Toolbar>
+                        <MarkButton format="bold" icon="format_bold" />
+                        <MarkButton format="italic" icon="format_italic" />
+                        <MarkButton format="underline" icon="format_underlined" />
+                        <MarkButton format="code" icon="code" />
+                    </Toolbar>
+                    <Editable />
+                </Slate>
                 <label>Role title</label>
                 <input></input>
                 <label>Intro</label>
