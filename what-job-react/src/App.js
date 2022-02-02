@@ -28,6 +28,7 @@ function App() {
           <Route path='/JobPosts' element={<JobPosts />} />
         </Routes>
       </Router>
+
     </div>
   );
 }
