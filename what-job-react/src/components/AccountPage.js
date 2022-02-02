@@ -3,7 +3,9 @@ import React from 'react'
 export function AccountPage(props) {
     return (
         <div>
-            <div className='MyPosts'>
+            <div className='MyPosts'><a href='/NewPost'>
+                <button>New Post</button>
+            </a>
                 {/* Api fetch call to get this users posts */}
 
             </div>

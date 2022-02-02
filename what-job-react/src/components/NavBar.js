@@ -1,15 +1,20 @@
 import React from 'react'
-
 export function NavBar() {
     return (
         <div>
-            <button>Home</button>
+            <a href='/'>
+                <button>Home</button>
+            </a>
             {/* if user isLoggedIn == true */}
-            <button>Login/Signup</button>
+            <a href='/Signup'>
+                <button>Login/Signup</button></a>
             {/* else  */}
-            <button>My Account</button>
-            <button>Categories</button>
-            <button>Contact us</button>
+            <a href='/Account'>
+                <button>My Account</button></a>
+            <a href='/Categories'>
+                <button>Categories</button></a>
+            <a href='/ContactUs'>
+                <button>Contact us</button></a>
         </div>
     )
 }
