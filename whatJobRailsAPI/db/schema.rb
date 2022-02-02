@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_02_02_041025) do
 
   # These are extensions that must be enabled in order to support this database
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_041025) do
     t.text "job_security"
     t.text "industry_growth"
     t.text "work_life_balance"
+
     t.decimal "upvotes"
     t.decimal "downvotes"
     t.text "role_details"
