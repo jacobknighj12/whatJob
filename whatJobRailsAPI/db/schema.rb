@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_063314) do
     t.text "job_security"
     t.text "industry_growth"
     t.text "work_life_balance"
+
     t.decimal "upvotes"
     t.decimal "downvotes"
     t.text "role_details"
