@@ -15,7 +15,6 @@ function App() {
   // const [darkMode, setDarkMode] = useContext(false)
   return (
     <div className="App">
-
       <NavBar />
       <Router>
         <Routes>
@@ -28,6 +27,7 @@ function App() {
           <Route path='/Account' element={<AccountPage />} />
         </Routes>
       </Router>
+
     </div>
   );
 }
