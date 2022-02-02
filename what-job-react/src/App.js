@@ -25,6 +25,7 @@ function App() {
           <Route path='/Categories' element={<CategoriesPage />} />
           <Route path='/NewPost' element={<NewPostPage />} />
           <Route path='/Account' element={<AccountPage />} />
+          <Route path='/JobPosts' element={<JobPosts />} />
         </Routes>
       </Router>
     </div>
