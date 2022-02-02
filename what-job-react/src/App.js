@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="App">
 
+
       <NavBar />
       <Router>
         <Routes>
@@ -28,6 +29,7 @@ function App() {
           <Route path='/Account' element={<AccountPage />} />
         </Routes>
       </Router>
+
     </div>
   );
 }
