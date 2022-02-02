@@ -6,6 +6,7 @@ export function SignupPage() {
             <form>
                 <label>Username</label>
                 <input></input>
+                <label>Email</label>
                 <input></input>
                 <label>Password</label>
                 <input></input>
