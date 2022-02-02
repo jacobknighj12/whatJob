@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_134817) do
+
+ActiveRecord::Schema.define(version: 2022_02_02_041025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,15 +30,16 @@ ActiveRecord::Schema.define(version: 2022_02_01_134817) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
-    t.string "intro", null: false
-    t.string "day_to_day"
-    t.string "career_path"
+    t.text "intro", null: false
+    t.text "day_to_day"
+    t.text "career_path"
     t.decimal "expected_salary_range_from"
     t.decimal "expected_salary_range_to"
     t.decimal "difficulty"
-    t.string "job_security"
-    t.string "industry_growth"
-    t.string "work_life_balance"
+    t.text "job_security"
+    t.text "industry_growth"
+    t.text "work_life_balance"
+
     t.decimal "upvotes"
     t.decimal "downvotes"
     t.text "role_details"
