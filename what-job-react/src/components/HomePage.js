@@ -19,8 +19,10 @@ export function HomePage() {
 
                 {/* will make these links later */}
 
-                <a >Signup</a>
-                <a >Categories</a>
+                <a href='/Signup'>
+                    <button>Sign up</button></a>
+                <a href='/Categories'>
+                    <button>Categories</button></a>
             </div>
         </div>
     )
