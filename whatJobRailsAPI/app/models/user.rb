@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
 
          has_many :category
+         has_many :posts
 
          validates :email, presence: true, uniqueness: true
 end

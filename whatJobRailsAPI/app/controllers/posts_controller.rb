@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :authenticate_user, except: [:index, :random, :show ]
+    # before_action :authenticate_user, except: [:index, :random, :show ]
     before_action :set_post, only: [:show, :update, :destroy]
     before_action :check_ownership, only: [:update, :destroy]
     
@@ -10,11 +10,12 @@ class PostsController < ApplicationController
 
     def create
         @post = current_user.posts.create(post_params)
-        if @post.errors.any?
-            render json: @post.errors, status: :unprocessable_entity
-        else
-            render json: @post, status: 201
-        end
+        render json: {msh: 'hi'}, status: 201
+        #if @post.errors.any?
+        #    render json: @post.errors, status: :unprocessable_entity
+        #else
+         #   render json: @post, status: 201
+        #end
     end
 
     def show
