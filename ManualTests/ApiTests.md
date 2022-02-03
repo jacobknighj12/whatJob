@@ -25,6 +25,11 @@ Given: I am a Developer
 When:  I click the send button in postman with valid input lengths to sign up
 Then: The database should create an entry
 
+<!-- Feature: Through postman check that the Delete to api/member-data route can only take valid inputs to create an account 
+Given: I am a Developer
+When:  I click the send button in postman with valid input lengths to sign up
+Then: The database should create an entry -->
+
 Feature: Through postman check that the post request to the posts route can only take valid Users to create a post 
 Given: I am a Developer
 When:  I click the send button in postman with invalid User to create a post
@@ -39,6 +44,32 @@ Feature: Through postman check that the post request to the posts route can only
 Given: I am a Developer
 When:  I click the send button in postman with invalid User JWT key to create a post
 Then: The database should not create an entry
+
+Feature: Through postman check that the DELETE request to the posts route can only take the Users own post as the parameter
+Given: I am a Developer
+When:  I click the send button in postman with a wrong User to delete a post
+Then: The database should not delete the entry
+
+Feature: Through postman check that the DELETE request to the posts route can take the Users own post as the parameter
+Given: I am a Developer
+When:  I click the send button in postman with the User to delete a post
+Then: The database should delete the entry
+
+Feature: With postman the GET to /api/posts index action should show all posts
+Given: I am a developer
+When: I click send in postman with the GET for the posts index action 
+Then: All posts should be delivered from the database
+
+Feature: With postman the GET to /api/post/:id show action should show a singular post
+Given: I am a developer
+When: I click send in postman with the GET for the post Show action 
+Then: only one post should be delivered from the database
+
+<!-- this may be incorrect -->
+Feature: With postman the GET to /api/posts/:id Update action should update that singular post to the values changed
+Given: I am a developer
+When: I click send in postman with the GET for the post update action to a post id
+Then: the post should be updated with the new values provided
 
 
 }
