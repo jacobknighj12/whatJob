@@ -5,6 +5,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:email, :password, :first_name, :last_name)
   end
 
+
+
   private
 
   def respond_with(resource, _opts = {})
