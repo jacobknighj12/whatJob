@@ -4,6 +4,7 @@ export function HomePage() {
         <div>
             {/* hero image will need a fetch call helper */}
             {/* logo will be imported later */}
+
             <img src='whatJob-logo.JPG' style={{ width: 600 }}></img>
             <img src=''></img>
 
@@ -19,8 +20,10 @@ export function HomePage() {
 
                 {/* will make these links later */}
 
-                <a >Signup</a>
-                <a >Categories</a>
+                <a href='/Signup'>
+                    <button>Sign up</button></a>
+                <a href='/Categories'>
+                    <button>Categories</button></a>
             </div>
         </div>
     )

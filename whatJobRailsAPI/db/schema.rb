@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_02_02_063621) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_063621) do
     t.text "job_security"
     t.text "industry_growth"
     t.text "work_life_balance"
+
     t.decimal "upvotes"
     t.decimal "downvotes"
     t.text "role_details"
