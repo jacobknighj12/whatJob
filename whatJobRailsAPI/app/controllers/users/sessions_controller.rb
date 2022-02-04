@@ -1,10 +1,16 @@
 class Users::SessionsController < Devise::SessionsController
   respond_to :json
 
+
+  def new
+    render json: {error: 'API only logins supported. Use POST /users'}
+  end
+
+
   private
 
   def respond_with(_resource, _opts = {})
-    render json: { message: 'You are not logged in.' }, status: :ok
+    render json: { message: 'You are logged in.' }, status: :ok
   end
 
   def respond_to_on_destroy
