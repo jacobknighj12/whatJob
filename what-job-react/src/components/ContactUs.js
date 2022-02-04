@@ -1,4 +1,11 @@
+import axios from "axios";
 import React, { useState } from "react";
+import WhatJobRailsAPI from "../config/api";
+
+export async function getContactMessages() {
+  const response = await WhatJobRailsAPI.get("/api/contactmessage");
+  console.log(response);
+}
 
 export function ContactUs(props) {
   const [values, setValues] = useState({
@@ -9,9 +16,22 @@ export function ContactUs(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Thank you for your message");
-    event.target.reset();
-    setValues("");
+    var data = "";
+
+    var config = {
+      method: "post",
+      url: "http://localhost:3000/api/contactmessage",
+      headers: {},
+      data: data,
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   const handleNameChange = (event) => {

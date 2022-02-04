@@ -1,4 +1,3 @@
-
 import React, { useContext, useState } from "react";
 import "./App.css";
 import { HomePage } from "./components/HomePage";
@@ -18,17 +17,16 @@ function App() {
       <NavBar />
       <Router>
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/ContactUs' element={<ContactUs />} />
-          <Route path='/Login' element={<LoginPage />} />
-          <Route path='/Signup' element={<SignupPage />} />
-          <Route path='/Categories' element={<CategoriesPage />} />
-          <Route path='/NewPost' element={<NewPostPage />} />
-          <Route path='/Account' element={<AccountPage />} />
-          <Route path='/JobPosts' element={<JobPosts />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Signup" element={<SignupPage />} />
+          <Route path="/Categories" element={<CategoriesPage />} />
+          <Route path="/NewPost" element={<NewPostPage />} />
+          <Route path="/Account" element={<AccountPage />} />
+          <Route path="/JobPosts" element={<JobPosts />} />
         </Routes>
       </Router>
-
     </div>
   );
 }
