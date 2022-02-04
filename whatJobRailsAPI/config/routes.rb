@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get '/posts/:id', to: 'posts#update'
     delete '/posts/:id', to: 'posts#destroy'
 
+    get '/contactmessage', to: 'contactmessages#index'
     post '/contactmessage', to: 'contactmessages#create'
 
   end
