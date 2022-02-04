@@ -10,15 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 
 ActiveRecord::Schema.define(version: 2022_02_02_063621) do
 
+=======
+ActiveRecord::Schema.define(version: 2022_02_02_093129) do
+>>>>>>> main
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "contactmessages", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.text "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -40,7 +52,6 @@ ActiveRecord::Schema.define(version: 2022_02_02_063621) do
     t.text "job_security"
     t.text "industry_growth"
     t.text "work_life_balance"
-
     t.decimal "upvotes"
     t.decimal "downvotes"
     t.text "role_details"
