@@ -2,11 +2,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   respond_to :json
 
   def sign_up_params
-<<<<<<< HEAD
-    params.require(:user).permit(:email, :password, :first_name, :last_name)
-=======
     params.permit(:email, :password, :first_name, :last_name)
->>>>>>> main
   end
 
 
