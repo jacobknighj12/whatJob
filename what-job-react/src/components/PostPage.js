@@ -6,7 +6,7 @@ export function JobPosts(props) {
   const [likes, setLikes] = useState(0);
   const [disLikes, setDisLikes] = useState(0);
   const [posts, setPosts] = useState([]);
-
+  const [category, setCategory] = useState(1);
   useEffect(() => {
     axios.get("http://localhost:3000/api/posts").then((res) => setPosts(res.data));
     console.log(posts);
@@ -33,30 +33,42 @@ export function JobPosts(props) {
           <div>
             {posts.map((post, index) => (
               <div key={index}>
-                <div>
-                  User: {post.user_id}
-                </div><div>
-                  Title: {post.title}
-                </div><div>
-                  Introduction: {post.intro}
-                </div><div>
-                  Day to day: {post.day_to_day}
-                </div><div>
-                  Job difficulty: {post.difficulty}/10
-                </div><div>
-                  Expected salary range from {post.expected_salary_range_from} to {post.expected_salary_range_to}
-                </div><div>
-                  Industry growth {post.industry_growth}
-                </div><div>
-                  Work life balance {post.work_life_balance}
-                </div><div>
-                  good post: {post.upvotes}
-                </div><div>
-                  bad post: {post.downvotes}
-                </div>
-                <div> _</div>
+                {(() => {
+                  console.log('post.category_id')
+                  console.log(post.category_id)
+                  console.log('category')
+                  console.log(category)
+                  if (post.category_id == category) {
+                    <div>
+                      <div>
+                        User: {post.user_id}
+                      </div><div>
+                        Title: {post.title}
+                      </div><div>
+                        Introduction: {post.intro}
+                      </div><div>
+                        Day to day: {post.day_to_day}
+                      </div><div>
+                        Job difficulty: {post.difficulty}/10
+                      </div><div>
+                        Expected salary range from {post.expected_salary_range_from} to {post.expected_salary_range_to}
+                      </div><div>
+                        Industry growth {post.industry_growth}
+                      </div><div>
+                        Work life balance {post.work_life_balance}
+                      </div><div>
+                        good post: {post.upvotes}
+                      </div><div>
+                        bad post: {post.downvotes}
+                      </div>
+                      <div> _</div>
+                    </div>
+                  }
+                })()}
               </div>
-            ))}
+
+            ))
+            }
           </div>
         </div>
 
