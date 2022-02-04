@@ -1,3 +1,4 @@
+
 import React, { useContext, useState } from "react";
 import "./App.css";
 import { HomePage } from "./components/HomePage";
@@ -10,13 +11,10 @@ import { NewPostPage } from "./components/NewPostPage";
 import { AccountPage } from "./components/AccountPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { JobPosts } from "./components/PostPage";
-
 function App() {
   // const [darkMode, setDarkMode] = useContext(false)
   return (
     <div className="App">
-
-
       <NavBar />
       <Router>
         <Routes>
@@ -27,6 +25,7 @@ function App() {
           <Route path='/Categories' element={<CategoriesPage />} />
           <Route path='/NewPost' element={<NewPostPage />} />
           <Route path='/Account' element={<AccountPage />} />
+          <Route path='/JobPosts' element={<JobPosts />} />
         </Routes>
       </Router>
 
