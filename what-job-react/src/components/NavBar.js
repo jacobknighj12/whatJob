@@ -2,6 +2,8 @@ import React from 'react'
 export function NavBar() {
     return (
         <div>
+            <img src='whatJob-logo.JPG' style={{ width: 600 }}></img>
+            <img src=''></img>
             <a href='/'>
                 <button>Home</button>
             </a>
