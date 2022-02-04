@@ -8,8 +8,8 @@ export function JobPosts(props) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("api/post.json").then((res) => setPosts(res.data));
-    console.log(setPosts);
+    axios.get("http://localhost:3000/api/posts").then((res) => setPosts(res.data));
+    console.log(posts);
   }, []);
 
 
@@ -21,22 +21,8 @@ export function JobPosts(props) {
   };
 
 
-  function displayAllPosts() {
-    var config = {
-      method: 'get',
-      url: 'http://localhost:3000/api/posts',
-      headers: {}
-    };
 
-    axios(config)
-      .then(function (response) {
-        setText(response.data)
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-  displayAllPosts()
+
   return (
     <>
       <div>
@@ -47,7 +33,28 @@ export function JobPosts(props) {
           <div>
             {posts.map((post, index) => (
               <div key={index}>
-                {post.title} | {posts.intro}
+                <div>
+                  User: {post.user_id}
+                </div><div>
+                  Title: {post.title}
+                </div><div>
+                  Introduction: {post.intro}
+                </div><div>
+                  Day to day: {post.day_to_day}
+                </div><div>
+                  Job difficulty: {post.difficulty}/10
+                </div><div>
+                  Expected salary range from {post.expected_salary_range_from} to {post.expected_salary_range_to}
+                </div><div>
+                  Industry growth {post.industry_growth}
+                </div><div>
+                  Work life balance {post.work_life_balance}
+                </div><div>
+                  good post: {post.upvotes}
+                </div><div>
+                  bad post: {post.downvotes}
+                </div>
+                <div> _</div>
               </div>
             ))}
           </div>
@@ -57,7 +64,7 @@ export function JobPosts(props) {
         <a>Link to Deep Dive for post</a>
 
       </div>
-      <p className='text' >{text}</p>
+
       <div>
         <button onClick={handleIncrementLikes}>(Bootstrap thumbs up)</button>
         <h5>Count is {likes}</h5>
