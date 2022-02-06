@@ -10,6 +10,7 @@ import { NewPostPage } from "./components/NewPostPage";
 import { AccountPage } from "./components/AccountPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { JobPosts } from "./components/PostPage";
+import { DeepDivePage } from "./components/DeepDivePage";
 function App() {
   // const [darkMode, setDarkMode] = useContext(false)
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/NewPost" element={<NewPostPage />} />
           <Route path="/Account" element={<AccountPage />} />
           <Route path="/JobPosts" element={<JobPosts />} />
+          <Route path="/DeepDive" element={<DeepDivePage />} />
         </Routes>
       </Router>
     </div>
