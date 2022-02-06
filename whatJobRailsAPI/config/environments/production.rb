@@ -102,4 +102,23 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  
+  # host = 'localhost:3000' #replace with your own url
+  # config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+  
+  # SMTP settings for gmail
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings for gmail
+  # Rails.application.configure do
+    # config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    :address              => "localhost",
+    :port                 => 1025
+    # :user_name            => '<whatjob321@gmail.com>',
+    # :password             => '<sfwxdbdmmbgo>',
+    # :authentication       => "plain",
+    # :enable_starttls_auto => true
+  }
+config.action_mailer.default_url_options = {host: "localhost:3000"}
 end
