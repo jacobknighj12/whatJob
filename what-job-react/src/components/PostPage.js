@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -7,11 +6,31 @@ export function JobPosts(props) {
   const [disLikes, setDisLikes] = useState(0);
   const [posts, setPosts] = useState([]);
 
+  const handleReportClick = (event) => {
+    event.preventDefault();
+      var data = values;
+  
+      var config = {
+        method: "post",
+        url: "http://localhost:3000/api/contactmessage",
+        headers: {},
+        data: data,
+      };
+  
+      axios(config)
+        .then(function (response) {
+          console.log(JSON.stringify(response.data));
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    };
+  };
+
   useEffect(() => {
     axios.get("api/post.json").then((res) => setPosts(res.data));
     console.log(setPosts);
   }, []);
-
 
   const handleIncrementLikes = () => {
     setLikes((prevLikes) => prevLikes + 1);
@@ -20,23 +39,22 @@ export function JobPosts(props) {
     setDisLikes((prevDisLikes) => prevDisLikes + 1);
   };
 
-
   function displayAllPosts() {
     var config = {
-      method: 'get',
-      url: 'http://localhost:3000/api/posts',
-      headers: {}
+      method: "get",
+      url: "http://localhost:3000/api/posts",
+      headers: {},
     };
 
     axios(config)
       .then(function (response) {
-        setText(response.data)
+        setText(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   }
-  displayAllPosts()
+  displayAllPosts();
   return (
     <>
       <div>
@@ -55,9 +73,8 @@ export function JobPosts(props) {
 
         <div> Post from database inserted here</div>
         <a>Link to Deep Dive for post</a>
-
       </div>
-      <p className='text' >{text}</p>
+      <p className="text">{text}</p>
       <div>
         <button onClick={handleIncrementLikes}>(Bootstrap thumbs up)</button>
         <h5>Count is {likes}</h5>
