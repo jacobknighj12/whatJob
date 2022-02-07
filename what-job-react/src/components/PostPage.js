@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -12,7 +11,6 @@ export function JobPosts(props) {
     console.log(posts);
   }, []);
 
-
   const handleIncrementLikes = () => {
     setLikes((prevLikes) => prevLikes + 1);
   };
@@ -25,6 +23,23 @@ export function JobPosts(props) {
 
 
 
+
+  function displayAllPosts() {
+    var config = {
+      method: 'get',
+      url: 'http://localhost:3000/api/posts',
+      headers: {}
+    };
+
+    axios(config)
+      .then(function (response) {
+        setText(response.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+  displayAllPosts()
   return (
     <>
       <div>
@@ -38,6 +53,7 @@ export function JobPosts(props) {
         </form>
         <h1>Category Name</h1>
         <h2>Role Title</h2>
+
 
         <div>
           <div>
