@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'capybara/rails'
 
 RSpec.describe User, type: :model do
   # pending "add some examples to (or delete) #{__FILE__}"
@@ -12,9 +13,26 @@ RSpec.describe User, type: :model do
       newUser.password = 'passwordRspec'
       newUser.password_confirmation = 'passwordRspec'
       expect(newUser.email).to eq('testuser@cat.com') 
-      expect(newUser.email).to eq('passwordRspec') 
+      # expect(newUser.password).to eq('passwordRspec') 
     end
   end
+  
+  feature "update a user" do
+    it 'updates user details' do
+      newUser = User.new
+      newUser.email = 'testuser@cat.com'
+      newUser.password = 'passwordRspec'
+      newUser.password_confirmation = 'passwordRspec'
+      newUser = User.save
+      
+      newUser = User.update(newUser.email = 'testuser2@cat.com')
+      expect(newUser.email).to eq('testuser2@cat.com') 
+    end
+  end
+
+
+
+
 end
 #   # `js: true` spec metadata means this will run using the `:selenium`
 #   # browser driver configured in spec/support/capybara.rb
