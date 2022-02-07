@@ -7,6 +7,11 @@ export async function getContactMessages() {
   console.log(response);
 }
 
+// export async function sendMessage() {
+//   const response = await WhatJobRailsAPI.post("/api/contactmessage", data);
+//   console.log(response.data);
+// }
+
 export function ContactUs(props) {
   const [values, setValues] = useState({
     name: "",
@@ -16,7 +21,7 @@ export function ContactUs(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    var data = "";
+    var data = values;
 
     var config = {
       method: "post",

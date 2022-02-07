@@ -2,7 +2,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   respond_to :json
 
   def sign_up_params
-    params.require(:user).permit(:email, :password)
+    params.permit(:email, :password, :password_confirmation, :first_name, :last_name)
   end
 
   private
@@ -19,5 +19,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def register_failed
     render json: { message: 'Something went wrong.' }
+
   end
 end
