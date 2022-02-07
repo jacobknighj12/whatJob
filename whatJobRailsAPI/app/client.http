@@ -1,6 +1,0 @@
-### Index method
-GET http://localhost:3000/api/contactmessage
-
-###Post contact message to DB
-POST http://localhost:3000/api/contactmessage
-Content-Type: 

@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_02_02_093129) do
 
   # These are extensions that must be enabled in order to support this database
@@ -17,14 +18,6 @@ ActiveRecord::Schema.define(version: 2022_02_02_093129) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "contactmessages", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.text "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -46,6 +39,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_093129) do
     t.text "job_security"
     t.text "industry_growth"
     t.text "work_life_balance"
+
     t.decimal "upvotes"
     t.decimal "downvotes"
     t.text "role_details"
@@ -66,8 +60,8 @@ ActiveRecord::Schema.define(version: 2022_02_02_093129) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "first_name"
-    t.string "last_name"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

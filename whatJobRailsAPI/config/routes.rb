@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
- 
-
   scope '/api' do      
     devise_for :users,
     controllers: {
@@ -8,12 +6,13 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
     }
     
+
     get '/posts', to: 'posts#index'
-    post '/posts', to: 'posts#create'
+    post '/posts', to: 'posts#index'
     get '/posts/:id', to: 'posts#show'
-    put '/posts/:id', to: 'posts#update'
+    get '/posts/:id', to: 'posts#update'
     delete '/posts/:id', to: 'posts#destroy'
-    get '/contactmessage', to: 'contactmessages#index'
-    post '/contactmessage', to: 'contactmessages#create'
   end
+
+
 end

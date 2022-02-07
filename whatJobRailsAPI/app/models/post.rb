@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
 belongs_to :category
-belongs_to :user
 
 # validate :require_salary_base_and_top
 validates_length_of :title, maximum: 50, allow_blank: false, message:'Please enter a title and ensure that it is less than 50 characters.' 
