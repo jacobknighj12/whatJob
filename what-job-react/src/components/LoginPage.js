@@ -5,12 +5,12 @@ function handleSubmit(event) {
     event.preventDefault();
     var FormData = require('form-data');
     var data = new FormData();
-    data.append('user[email]', 'alex2@test.com');
-    data.append('user[password]', 'password1');
+    data.append('user[email]', `${event.target.email.value}`);
+    data.append('user[password]', `${event.target.password.value}`);
 
     var config = {
         method: 'post',
-        url: 'http://localhost:3000/users/sign_in',
+        url: 'http://localhost:3000/api/users/sign_in',
         headers: {
             // ...data.getHeaders() this breaks the app
         },
@@ -30,12 +30,10 @@ export function LoginPage() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label>Username</label>
-                <input></input>
                 <label>Email</label>
-                <input></input>
+                <input type='text' name='email'></input>
                 <label>Password</label>
-                <input></input>
+                <input type='password' name='password'></input>
                 <button >Login</button>
             </form>
             <a href='/Signup'>
