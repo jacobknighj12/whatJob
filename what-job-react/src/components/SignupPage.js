@@ -12,7 +12,8 @@ export function SignupPage() {
                 <input></input>
                 <button>Signup</button>
             </form>
-            <button>Login</button>
+            <a href='/Login'>
+                <button>Login</button></a>
         </div>
     )
 }

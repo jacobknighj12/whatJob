@@ -26,7 +26,7 @@
         )
     end
 
-    categories = ["Accounting", "Administration & Office Support", "Advertising, Arts & Media", "Banking & Financial Services", "Call Centre & Customer Service", "CEO & General Management", "Community Services & Development", "Construction", "Consulting & Strategy", "Design & Architecture", "Education & Training", "Engineering", "Farming, Animals & Conservation", "Government & Defence", "Healthcare & Medical",  "Hospitality & Tourism", "Human Resources & Recruitment", "Information & Communication Technology", "Insurance & Superannuation", "Legal", "Manufacturing, Transport & Logistics", "Marketing Communications", "Mining, Resources & Energy", "Real Estate & Property", "Retail & Consumer Products Sales", "Science & Technology", "Self Employment", "Sport & Recreation", "Trades & Services"]
+
 
 if Category.all.length == 0
     categories.each do |category|
@@ -35,7 +35,7 @@ if Category.all.length == 0
     end
 end
 
-
+categories = ["Accounting", "Administration & Office Support", "Advertising, Arts & Media", "Banking & Financial Services", "Call Centre & Customer Service", "CEO & General Management", "Community Services & Development", "Construction", "Consulting & Strategy", "Design & Architecture", "Education & Training", "Engineering", "Farming, Animals & Conservation", "Government & Defence", "Healthcare & Medical",  "Hospitality & Tourism", "Human Resources & Recruitment", "Information & Communication Technology", "Insurance & Superannuation", "Legal", "Manufacturing, Transport & Logistics", "Marketing Communications", "Mining, Resources & Energy", "Real Estate & Property", "Retail & Consumer Products Sales", "Science & Technology", "Self Employment", "Sport & Recreation", "Trades & Services"]
 
 if Post.all.length == 0
     Post.create(
