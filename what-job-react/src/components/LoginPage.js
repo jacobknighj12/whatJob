@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 var axios = require('axios');
 
-function handleSubmit(event) {
+function handleSubmit(event, setUser) {
     event.preventDefault();
     var FormData = require('form-data');
     var data = new FormData();
@@ -20,12 +20,18 @@ function handleSubmit(event) {
     axios(config)
         .then(function (response) {
             console.log(JSON.stringify(response.data));
+            // set the state of the user
+            // setUser(response.data) doesnt really work in this context due to being a function in a component
+            // store the user in localStorage
+            localStorage.setItem('user', response.data)
+            console.log(response.data)
         })
         .catch(function (error) {
             console.log(error);
         });
 }
 export function LoginPage() {
+    const [user, setUser] = useState()
 
     return (
         <div>
