@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Reportalert, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'successfully creates a new report alert' do
+    testReportalert = Reportalert.new
+    testReportalert.id = 'test id'
+    expect(testReportalert.id ).to eq('test id') 
+
+  end
 end
