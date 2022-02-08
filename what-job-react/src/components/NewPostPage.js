@@ -23,15 +23,16 @@ export function NewPostPage() {
             method: 'post',
             url: 'http://localhost:3000/api/posts',
             headers: {
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjQzODY2NTQ5LCJleHAiOjE2NDM4NzAxNDksImp0aSI6IjVlYjJiMDliLTBjZmMtNGE1NS1iNGY3LWVmOWY4Njc2MDYyOSJ9.lzJpRo9D6xBUMeK2zCtfLT-3LDDXAO6324_DpvrSaM4',
-                // ...data.getHeaders()
+                // 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjQzODY2NTQ5LCJleHAiOjE2NDM4NzAxNDksImp0aSI6IjVlYjJiMDliLTBjZmMtNGE1NS1iNGY3LWVmOWY4Njc2MDYyOSJ9.lzJpRo9D6xBUMeK2zCtfLT-3LDDXAO6324_DpvrSaM4',
+                // ...data.getHeaders
             },
             data: data
         };
 
         axios(config)
             .then(function (response) {
-                console.log(JSON.stringify(response.data));
+                console.log(response.data);
+
             })
             .catch(function (error) {
                 console.log(error);

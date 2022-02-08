@@ -13,18 +13,22 @@ function handleSubmit(event, setUser) {
         url: 'http://localhost:3000/api/users/sign_in',
         headers: {
             // ...data.getHeaders() this breaks the app
+            ...data.headersSent
         },
-        data: data
+        data: data,
+        headers: data.headersSent
     };
 
     axios(config)
         .then(function (response) {
             console.log(JSON.stringify(response.data));
+            console.log(JSON.stringify(response.headers));
+
             // set the state of the user
             // setUser(response.data) doesn't really work in this context due to being a function in a component
             // store the user in localStorage
-            localStorage.setItem('user', response.data)
-            console.log(response.data)
+            // console.log(...data.headersSent('Authorization'))
+            // localStorage.setItem('user', response.getHeader('Authorization'))
         })
         .catch(function (error) {
             console.log(error);
