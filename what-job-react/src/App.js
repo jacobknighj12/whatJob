@@ -25,7 +25,7 @@ function App() {
           <Route path="/Categories" element={<CategoriesPage />} />
           <Route path="/NewPost" element={<NewPostPage />} />
           <Route path="/Account" element={<AccountPage />} />
-          <Route path="/JobPosts" element={<JobPosts />} />
+          <Route path="/PostPage" element={<JobPosts />} />
           <Route path="/DeepDive" element={<DeepDivePage />} />
         </Routes>
       </Router>
