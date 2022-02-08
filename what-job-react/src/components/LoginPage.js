@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 var axios = require('axios');
 
-function handleSubmit(event) {
+function handleSubmit(event, setUser) {
     event.preventDefault();
     var FormData = require('form-data');
     var data = new FormData();
-    data.append('user[email]', 'alex2@test.com');
-    data.append('user[password]', 'password1');
+    data.append('user[email]', `${event.target.email.value}`);
+    data.append('user[password]', `${event.target.password.value}`);
 
     var config = {
         method: 'post',
-        url: 'http://localhost:3000/users/sign_in',
+        url: 'http://localhost:3000/api/users/sign_in',
+
         headers: {
             // ...data.getHeaders() this breaks the app
         },
@@ -20,6 +21,13 @@ function handleSubmit(event) {
     axios(config)
         .then(function (response) {
             console.log(JSON.stringify(response.data));
+
+            // set the state of the user
+            // setUser(response.data) doesnt really work in this context due to being a function in a component
+            // store the user in localStorage
+            localStorage.setItem('user', response.data)
+            console.log(response.data)
+
         })
         .catch(function (error) {
             console.log(error);
@@ -27,15 +35,15 @@ function handleSubmit(event) {
 }
 export function LoginPage() {
 
+    const [user, setUser] = useState()
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label>Username</label>
-                <input></input>
                 <label>Email</label>
-                <input></input>
+                <input type='text' name='email'></input>
                 <label>Password</label>
-                <input></input>
+                <input type='password' name='password'></input>
                 <button >Login</button>
             </form>
             <a href='/Signup'>
