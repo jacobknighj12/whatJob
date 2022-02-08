@@ -21,7 +21,7 @@ function handleSubmit(event, setUser) {
         .then(function (response) {
             console.log(JSON.stringify(response.data));
             // set the state of the user
-            // setUser(response.data) doesnt really work in this context due to being a function in a component
+            // setUser(response.data) doesn't really work in this context due to being a function in a component
             // store the user in localStorage
             localStorage.setItem('user', response.data)
             console.log(response.data)
