@@ -11,6 +11,7 @@ function handleSubmit(event, setUser) {
     var config = {
         method: 'post',
         url: 'http://localhost:3000/api/users/sign_in',
+
         headers: {
             // ...data.getHeaders() this breaks the app
             ...data.headersSent
@@ -24,17 +25,21 @@ function handleSubmit(event, setUser) {
             console.log(JSON.stringify(response.data));
             console.log(JSON.stringify(response.headers));
 
+
             // set the state of the user
             // setUser(response.data) doesn't really work in this context due to being a function in a component
             // store the user in localStorage
+
             // console.log(...data.headersSent('Authorization'))
             // localStorage.setItem('user', response.getHeader('Authorization'))
+
         })
         .catch(function (error) {
             console.log(error);
         });
 }
 export function LoginPage() {
+
     const [user, setUser] = useState()
 
     return (
