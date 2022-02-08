@@ -7,23 +7,24 @@ export function NewPostPage() {
     const [day_to_day, setDay_to_day] = useState("Go over the boring/exciting stuff that you often overlook but most of your days consist of");
     const [career_path, setCareer_path] = useState("How did you get to this position, study, luck, hardship, Nepotism. As well as ways that you know that enable a person to enter this field today.");
 
-    function handleSubmit() {
+    function handleSubmit(event) {
+        event.preventDefault();
         var FormData = require('form-data');
         var data = new FormData();
-        data.append('category_id', '3');
-        data.append('title', 'Another new Title');
-        data.append('intro', 'Another new Intro');
-        data.append('day_to_day', 'This is day to day');
-        data.append('career_path', 'This is career path');
-        data.append('expected_salary_range_from', '169690');
-        data.append('expected_salary_range_to', '2069');
+        data.append('category_id', `${event.target.category_id.value}`);
+        data.append('title', `${event.target.title.value}`);
+        data.append('intro', `${intro}`);
+        data.append('day_to_day', `${day_to_day}`);
+        data.append('career_path', `${career_path}`);
+        data.append('expected_salary_range_from', `${event.target.expected_salary_range_from}`);
+        data.append('expected_salary_range_to', `${event.target.expected_salary_range_to}`);
 
         var config = {
             method: 'post',
-            url: 'localhost:3000/api/posts',
+            url: 'http://localhost:3000/api/posts',
             headers: {
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjQzODY2NTQ5LCJleHAiOjE2NDM4NzAxNDksImp0aSI6IjVlYjJiMDliLTBjZmMtNGE1NS1iNGY3LWVmOWY4Njc2MDYyOSJ9.lzJpRo9D6xBUMeK2zCtfLT-3LDDXAO6324_DpvrSaM4',
-                ...data.getHeaders()
+                // ...data.getHeaders()
             },
             data: data
         };
@@ -39,7 +40,13 @@ export function NewPostPage() {
     return (
         <div>
             <h2>New post</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
+                <label>Category</label>
+                <select name="category_id">
+                    <option value="1">gamer</option>
+                    <option value="2">flamer</option>
+                    <option value="3">blamer</option>
+                </select>
 
                 <label>Role title</label>
                 <input></input>
@@ -96,7 +103,7 @@ export function NewPostPage() {
                     <option value={9} >9/10</option>
                     <option value={10} >10/10</option>
                 </select>
-                <button onSubmit={handleSubmit}>publish</button>
+                <button >publish</button>
             </form>
         </div>
     )

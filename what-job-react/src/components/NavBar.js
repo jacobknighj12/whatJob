@@ -1,6 +1,6 @@
 import React from 'react'
 export function NavBar() {
-    let user = JSON.parse(localStorage.getItem('user'))
+    // let user = JSON.parse(localStorage.getItem('user'))
     return (
         <div>
             <img src='whatJob-logo.JPG' style={{ width: 600 }}></img>
@@ -9,8 +9,8 @@ export function NavBar() {
                 <button>Home</button>
             </a>
             {(() => {
-                console.log(localStorage.getItem('user',))
-                if (user == true) {
+                // console.log(localStorage.getItem('user',))
+                if (true) {
                     <a href='/Login'>
                         <button>Login</button></a>
                 }
