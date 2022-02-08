@@ -16,14 +16,13 @@ export function JobPosts(props) {
   const onClick = (event) => {
     event.preventDefault();
     var data = posts.id;
-
+    console.log();
     var config = {
       method: "post",
       url: "http://localhost:3000/api/reportalert",
       headers: {},
       data: data,
     };
-
     axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
