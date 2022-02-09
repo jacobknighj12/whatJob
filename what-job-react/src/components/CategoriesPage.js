@@ -1,12 +1,32 @@
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+var axios = require('axios');
 
 export function CategoriesPage() {
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        var config = {
+            method: 'get',
+            url: 'http://localhost:3000/api/categories',
+            headers: {}
+        };
+
+        axios(config)
+            .then(function (response) {
+                setCategories(JSON.stringify(response.data));
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }, []);
     return (
-        <div>
+        < div >
+
             <form>
-                {/* does this need to be in a form? this will need to be majorities filled in by a api call into a 
-                for each category do this probably. as well as below will need a for each category take the the image or we could host it here. not sure */}
+
                 <label >Choose a field:</label>
 
                 <select id="Jobs" name="Jobs" size="1">
@@ -15,7 +35,19 @@ export function CategoriesPage() {
                 </select>
             </form>
 
-            {/* for each category take the image and display it as such in rows */}
-        </div>
+
+
+            <div>
+                {console.log(categories)}
+                {categories.map((category) =>
+                    <div key={category.id}>
+                        <p>{category.title}</p>
+                    </div>
+
+                )
+                }
+
+            </div>
+        </div >
     )
 }
