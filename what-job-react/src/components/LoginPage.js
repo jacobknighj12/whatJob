@@ -24,10 +24,6 @@ function handleSubmit(event, setUser) {
             console.log(JSON.stringify(response.data));
             console.log('Headers');
             console.log(JSON.stringify(response.headers.authorization));
-            // setUser(response.data) doesn't really work in this context due to being a function in a component
-            // store the user in localStorage
-
-            // console.log(...data.headersSent('Authorization'))
             localStorage.setItem('user', response.headers.authorization)
         })
         .catch(function (error) {
