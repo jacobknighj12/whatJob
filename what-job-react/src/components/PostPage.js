@@ -12,17 +12,15 @@ export function JobPosts(props) {
       .get("http://localhost:3000/api/posts")
       .then((res) => setPosts(res.data));
   }, []);
-
-  const onClick = (event) => {
-    event.preventDefault();
-    var data = posts.id;
-    console.log();
-    var config = {
+  let data = posts.id;
+  const handleClick = (event) => {
+    const config = {
       method: "post",
       url: "http://localhost:3000/api/reportalert",
       headers: {},
       data: data,
     };
+
     axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
@@ -31,7 +29,7 @@ export function JobPosts(props) {
         console.log(error);
       });
   };
-  console.log();
+
   const handleIncrementLikes = () => {
     setLikes((prevLikes) => prevLikes + 1);
   };
@@ -61,10 +59,6 @@ export function JobPosts(props) {
             {posts.map((post) => (
               <div key={post.id}>
                 {(() => {
-                  // console.log("post.id");
-                  // console.log(post.id);
-                  // console.log("category");
-                  // console.log(category);
                   if (post.category_id == category) {
                     return (
                       <>
@@ -89,9 +83,7 @@ export function JobPosts(props) {
                           </button>
                           <div> _</div>
 
-                          <form onClick={onClick}>
-                            <button value={posts.id}>Report</button>
-                          </form>
+                          <button onClick={handleClick(post.id)}>Report</button>
                         </div>
                       </>
                     );
