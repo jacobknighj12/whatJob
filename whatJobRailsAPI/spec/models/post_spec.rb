@@ -30,7 +30,8 @@ RSpec.describe Post, type: :model do
       expect(testPost.title).to eq('test title') 
       expect(testPost.intro).to eq('test intro') 
       expect(testPost.category_id).to eq(3) 
-      expect(testPost.user_id).to eq(1) 
+      expect(testPost.user_id).to eq(1)
+       
     end
   end
 
@@ -50,9 +51,7 @@ RSpec.describe Post, type: :model do
       testPost.category_id = '3'
       testPost.user_id = '1'
       testPost.save
-      delete 'api/posts/'
-      testPost = Post.update(2, :title => 'Amazing updated Title 2')
-      testPost.save
+      delete 'api/posts/1'
       expect(testPost.title).to eq('Amazing updated Title 2') 
     end
   end
