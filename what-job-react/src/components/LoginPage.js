@@ -13,26 +13,22 @@ function handleSubmit(event, setUser) {
         url: 'http://localhost:3000/api/users/sign_in',
 
         headers: {
-            // ...data.getHeaders() this breaks the app
-            ...data.headersSent
         },
         data: data,
-        headers: data.headersSent
+
     };
 
     axios(config)
         .then(function (response) {
+            console.log('data');
             console.log(JSON.stringify(response.data));
-            console.log(JSON.stringify(response.headers));
-
-
-            // set the state of the user
+            console.log('Headers');
+            console.log(JSON.stringify(response.headers.authorization));
             // setUser(response.data) doesn't really work in this context due to being a function in a component
             // store the user in localStorage
 
             // console.log(...data.headersSent('Authorization'))
-            // localStorage.setItem('user', response.getHeader('Authorization'))
-
+            localStorage.setItem('user', response.headers.authorization)
         })
         .catch(function (error) {
             console.log(error);
@@ -46,9 +42,9 @@ export function LoginPage() {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Email</label>
-                <input type='text' name='email'></input>
+                <input type='email' name='email'></input>
                 <label>Password</label>
-                <input type='password' name='password'></input>
+                <input type='current-password' name='password'></input>
                 <button >Login</button>
             </form>
             <a href='/Signup'>

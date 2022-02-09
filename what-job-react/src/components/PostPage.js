@@ -62,11 +62,14 @@ export function JobPosts(props) {
                         </div><div>
                           Job difficulty: {post.difficulty}/10
                         </div><div>
-                          Expected salary range from {post.expected_salary_range_from} to {post.expected_salary_range_to}
+                          Expected salary range from: {post.expected_salary_range_from} to: {post.expected_salary_range_to}
                         </div><div>
-                          Industry growth {post.industry_growth}
+                          Industry growth: {post.industry_growth}
                         </div><div>
-                          Work life balance {post.work_life_balance}
+                          Work life balance: {post.work_life_balance}
+                        </div><div>
+                        </div><div>
+                          Career Path: {post.career_path}
                         </div><div>
                           good post: {post.upvotes}
                         </div><div>
