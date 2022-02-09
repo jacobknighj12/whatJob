@@ -7,7 +7,7 @@ export function NewPostPage() {
     const [day_to_day, setDay_to_day] = useState("Go over the boring/exciting stuff that you often overlook but most of your days consist of");
     const [career_path, setCareer_path] = useState("How did you get to this position, study, luck, hardship, Nepotism. As well as ways that you know that enable a person to enter this field today.");
     const [industry_growth, setIndustry_growth] = useState("How fast is this industry growing, or is it shrinking? do they have good or bad entry into the industry due to new things happening?.");
-    const [work_life_balance, setWork_life_balance] = useState("how much time do you have to yourself after work? do you do extra hours constantly? do you have lots of overtime? can you get time off easily? how many hours from getting up till you get home is your average day?(including travel).");
+    const [work_life_balance, setWork_life_balance] = useState("how much time do you have to yourself after work? do you do extra hours constantly? do you have lots of overtime? can you get time off easily? how many hours from getting up till you get home is your average day? including travel.");
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -18,6 +18,8 @@ export function NewPostPage() {
         data.append('intro', `${intro}`);
         data.append('day_to_day', `${day_to_day}`);
         data.append('career_path', `${career_path}`);
+        data.append('industry_growth', `${industry_growth}`);
+        data.append('work_life_balance', `${work_life_balance}`);
         data.append('expected_salary_range_from', `${event.target.expected_salary_range_from.value}`);
         data.append('expected_salary_range_to', `${event.target.expected_salary_range_to.value}`);
         data.append('difficulty', `${event.target.difficulty.value}`);
