@@ -14,25 +14,41 @@ RSpec.describe Post, type: :model do
     expect(testPost.user_id).to eq(1) 
   end
 
-  it 'unsuccessfully creates a new post' do
-    testPost = Post.new
-    testPost.title = 'test title'
-    testPost.category_id = '3'
-    testPost.user_id = '1'
-    expect(testPost.title).to eq('test title') 
-    expect(testPost.intro).to eq('test intro') 
-    expect(testPost.category_id).to eq(3) 
-    expect(testPost.user_id).to eq(1) 
-    expect(testpost.isvalid?).to eq(false)
+  describe 'POST /posts' do
+    it 'successfully creates a new post' do
+      testPost = Post.new
+      testPost.title = 'test title'
+      testPost.intro = 'test intro'
+      testPost.category_id = '3'
+      testPost.user_id = '1'
+      expect(testPost.title).to eq('test title') 
+      expect(testPost.intro).to eq('test intro') 
+      expect(testPost.category_id).to eq(3) 
+      expect(testPost.user_id).to eq(1)
+       
+    end
   end
   
 
-
-
-  it 'updates a post' do
-    testPost = Post.create(testPost.title = 'test title', testPost.category_id = '3', testPost.user_id = '1')
-    testPost.update(title: 'Amazing updated Title 2')
-    expect(Post.find(testPost.id).title).to eq('Amazing updated Title 2') 
+  describe 'PUT /posts' do
+    it 'updates a post' do
+      testPost = Post.update(2, :title => 'Amazing updated Title 2')
+      testPost.save
+      expect(testPost.title).to eq('Amazing updated Title 2') 
+    end
+  end
+     
+  describe 'DELETE /posts' do
+    it 'deletes a post' do
+      testPost = Post.new
+      testPost.title = 'test title'
+      testPost.intro = 'test intro'
+      testPost.category_id = '3'
+      testPost.user_id = '1'
+      testPost.save
+      delete 'api/posts/1'
+      expect(testPost.title).to eq('Amazing updated Title 2') 
+    end
   end
 
 
