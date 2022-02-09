@@ -1,11 +1,11 @@
 class ReportalertController < ApplicationController
     def index
-        @reportalert = Reportalert.includes(:posts).all
+        @reportalert = Reportalert.all
         render json: @reportalert, status: 201
     end
 
     def create
-        @reportalert = Reportalert.new(reportalert_params)
+        @reportalert = Reportalert.create(reportalert_params)
         puts "creates controller for the reportalertcontroller"
         puts "reportalert_parms"
         puts reportalert_params
