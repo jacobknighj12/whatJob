@@ -108,9 +108,10 @@ select{
   .nav{
     text-decoration: none;
     display: grid;
-    grid-template-columns: 200px 4fr;
+    grid-template-columns: 200px 1fr;
     /* grid-template-rows: 1fr 1fr; */
-    justify-content: center;
+    align-content: center;
+    grid-auto-flow: row;
   }
   
   
@@ -123,17 +124,22 @@ select{
   }
   
   .nav-buttons{
-    grid-column: 1fr;
-    padding: 9% 25% 0px 10%;   
+    background-color: tomato;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* grid-column: 1fr 1fr 1fr 1fr; */
+    padding: 9% 14% 0px 10%;   
   }
   
   
   .nav button{
     border: steelblue 10px;
-    margin: 10px;
-    width: 100%;
-    align-self: center;
-    justify-self: center;
+    /* margin: 10px; */
+    width: 100px;
+    /* align-self: center;
+    justify-self: center; */
   }
 }
 

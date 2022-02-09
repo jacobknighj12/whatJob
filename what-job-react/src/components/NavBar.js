@@ -2,7 +2,7 @@ import React from 'react'
 import { ReactComponent as Logo } from './whatjob_logo.svg';
 export function NavBar() {
     return (
-        <div className='nav'>
+        <nav className='nav'>
 
             {/* Background image          */}
             <img src='' />
@@ -25,6 +25,6 @@ export function NavBar() {
             <a href='/ContactUs'>
                 <button>Contact us</button></a>
             </div>
-        </div>
+        </nav>
     )
 }
