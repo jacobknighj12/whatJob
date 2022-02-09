@@ -1,6 +1,6 @@
 class ReportalertController < ApplicationController
     def index
-        @reportalert = Reportalert.all
+        @reportalert = Reportalert.includes(:posts).all
         render json: @reportalert, status: 201
     end
 
