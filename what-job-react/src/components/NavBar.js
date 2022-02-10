@@ -5,8 +5,8 @@ export function NavBar() {
         <nav className='nav'>
 
             {/* Background image          */}
-            <img src='' />
             
+            {/* <img src='' /> */}
             <div className='nav-logo'>
             <Logo />
             </div>

@@ -2,17 +2,20 @@ import React from 'react'
 
 export function SignupPage() {
     return (
-        <div>
+        <><heading className="heading">Signup</heading><div className='login-signup'>
             <form>
+
                 <label>Username</label>
-                <input></input>
+                <input id='username' type="text"></input>
                 <label>Email</label>
-                <input></input>
+                <input id="email" type="text"></input>
                 <label>Password</label>
-                <input></input>
-                <button>Signup</button>
+                <input id="password" type="text"></input>
+
+                <div className='button-group'><button>Signup</button>
+                    {/* </form> */}
+                    <button>Login</button></div>
             </form>
-            <button>Login</button>
-        </div>
+        </div></>
     )
 }

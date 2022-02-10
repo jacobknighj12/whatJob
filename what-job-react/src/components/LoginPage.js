@@ -2,17 +2,19 @@ import React from 'react'
 
 export function LoginPage() {
     return (
-        <div>
+        <><heading></heading>
+
             <form>
+
                 <label>Username</label>
                 <input></input>
-                <label>Email</label>
+                <label className='login-signup input '>Email</label>
                 <input></input>
                 <label>Password</label>
                 <input></input>
                 <button>Signup</button>
-            </form>
-            <button>Login</button>
-        </div>
+            
+        <button>Login</button></form></>
+
     )
 }
