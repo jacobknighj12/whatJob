@@ -41,7 +41,7 @@ export function SignupPage() {
                 <input type='text' name='last_name'></input>
                 <label>Password</label>
                 <input type='password' name='password'></input>
-                <button>Signup</button>
+                <button><a href='/Login'>Signup</a></button>
             </form>
             <a href='/Login'>
                 <button>Login</button></a>

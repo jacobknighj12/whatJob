@@ -23,7 +23,6 @@ export function JobPosts() {
   };
   function handleCategory(event) {
     setSelectedCategory(event.target.value);
-    console.log(selectedCategory);
   }
 
   return (
@@ -31,7 +30,7 @@ export function JobPosts() {
       <div>
         <form onChange={handleCategory}>
           <label >Choose a field:</label>
-          <select id="Jobs" name="Jobs" size="1">
+          <select value={seclectedCategory} id="Jobs" name="Jobs" size="1">
             {categories.map((category) => (
               <option key={category.id} value={category.id}>{category.name}</option>
             ))
@@ -40,7 +39,6 @@ export function JobPosts() {
         </form>
         <h1>Category Name</h1>
         <h2>Role Title</h2>
-
         <div>
           <div>
             {
@@ -48,8 +46,6 @@ export function JobPosts() {
                 <div key={post.id}>
                   {(() => {
                     if (post.category_id == selectedCategory) {
-                      console.log(post.category_id)
-                      console.log(selectedCategory)
                       return (
                         <div>
                           <div>
@@ -76,7 +72,7 @@ export function JobPosts() {
                           </div><div>
                             bad post: {post.downvotes}
                           </div>
-                          <button><a>Link to Deep Dive</a></button>
+                          <button><a href="/">Link to Deep Dive</a></button>
                           <div> _</div>
                         </div>)
                     }

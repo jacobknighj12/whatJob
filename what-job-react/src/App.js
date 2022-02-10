@@ -13,6 +13,7 @@ import { JobPosts } from "./components/PostPage";
 import { DeepDivePage } from "./components/DeepDivePage";
 function App() {
   // const [darkMode, setDarkMode] = useContext(false)
+  // const [category, setCategory] = useContext(false)
   return (
     <div className="App">
       <NavBar />
@@ -22,7 +23,7 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Signup" element={<SignupPage />} />
-          <Route path="/Categories" element={<CategoriesPage />} />
+          <Route path="/Categories" element={<CategoriesPage seclectedCategory={1} />} />
           <Route path="/NewPost" element={<NewPostPage />} />
           <Route path="/Account" element={<AccountPage />} />
           <Route path="/JobPosts" element={<JobPosts />} />
