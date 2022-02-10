@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, fireEvent, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "./App";
 import React from "react";
 import { HomePage } from "./components/HomePage";
 import { NavBar } from "./components/NavBar";
@@ -11,11 +12,16 @@ import { NewPostPage } from "./components/NewPostPage";
 import { AccountPage } from "./components/AccountPage";
 import { JobPosts } from "./components/PostPage";
 
-
-
-
-test('renders navbar button home', () => {
+test("renders navbar button home", () => {
   render(<App />);
   const buttonElement = screen.getByText(/whatJob?/i);
   expect(buttonElement).toBeInTheDocument();
+});
+
+// ContactUs Page Tests
+
+describe("ContactUsPage", () => {
+  test("renders contact page", async () => {
+    render(<ContactUs />);
+  });
 });
