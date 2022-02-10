@@ -12,8 +12,13 @@ export function CategoriesPage() {
         console.log(selectedCategory)
     }, []);
     function handleChange(event) {
-        setSelectedCategory(event.target.value);
-        localStorage.setItem('selectedCategory', selectedCategory);
+        event.preventDefault();
+        let newValue = event.target.value; //why does this work? I DONT UNDERSTAND WHY I DONT WANT TO KNOW WHY BUT IT ONLY WORKS IF NEW VALUE IS PASSED IN NOT EVENT.TARGET.VALUE
+        setSelectedCategory(newValue); //not setting to the target value
+        console.log(selectedCategory); //incorrect value
+        console.log(event.target.value); //correct value
+        localStorage.setItem('selectedCategory', newValue);
+        console.log(localStorage.getItem('selectedCategory'));
     }
     return (
         < div >
@@ -25,11 +30,12 @@ export function CategoriesPage() {
                     ))
                     }
                 </select>
+                <button><a href='/JobPosts'>Go</a></button>
             </form>
             <div>
                 {categories.map((category) => (
                     <div key={category.id}>
-                        <a href='/JobPosts' >{category.name}</a>
+                        {category.name}
                     </div>
 
                 ))

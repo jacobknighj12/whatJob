@@ -10,9 +10,12 @@ export function JobPosts() {
   const [selectedCategory, setSelectedCategory] = useState(1);
   useEffect(() => {
     axios.get("http://localhost:3000/api/posts").then((res) => setPosts(res.data));
-    console.log(posts);
     axios.get("http://localhost:3000/api/categories").then((res) => setCategories(res.data));
+    // console.log('local')
+    // console.log(localStorage.getItem('selectedCategory'))
     setSelectedCategory(localStorage.getItem('selectedCategory'));
+    // console.log('selected state')
+    // console.log(selectedCategory)
   }, []);
 
   const handleIncrementLikes = () => {
@@ -22,9 +25,11 @@ export function JobPosts() {
     setDisLikes((prevDisLikes) => prevDisLikes + 1);
   };
   function handleCategory(event) {
-    console.log(selectedCategory);
-    setSelectedCategory(event.target.value);
-    localStorage.setItem('selectedCategory', selectedCategory);
+    let newValue = event.target.value; //why does this work? I DONT UNDERSTAND WHY I DONT WANT TO KNOW WHY BUT IT ONLY WORKS IF NEW VALUE IS PASSED IN NOT EVENT.TARGET.VALUE
+    setSelectedCategory(newValue); //not setting to the target value
+    console.log(selectedCategory); //incorrect value
+    console.log(event.target.value); //correct value
+    localStorage.setItem('selectedCategory', newValue);
     console.log(localStorage.getItem('selectedCategory'));
   }
 
