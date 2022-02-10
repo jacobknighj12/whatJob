@@ -12,24 +12,15 @@ export function CategoriesPage() {
 
     return (
         < div >
-
             <form>
-
                 <label >Choose a field:</label>
-
                 <select id="Jobs" name="Jobs" size="1">
-
                     {categories.map((category) => (
                         <option key={category.id} value={category.id}>{category.name}</option>
-
                     ))
                     }
-
                 </select>
             </form>
-
-
-
             <div>
                 {categories.map((category) => (
                     <div key={category.id}>

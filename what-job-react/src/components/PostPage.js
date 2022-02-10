@@ -6,10 +6,12 @@ export function JobPosts() {
   const [likes, setLikes] = useState(0);
   const [disLikes, setDisLikes] = useState(0);
   const [posts, setPosts] = useState([]);
-  const [category, setCategory] = useState(1);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(1);
   useEffect(() => {
     axios.get("http://localhost:3000/api/posts").then((res) => setPosts(res.data));
     console.log(posts);
+    axios.get("http://localhost:3000/api/categories").then((res) => setCategories(res.data));
   }, []);
 
 
@@ -20,10 +22,9 @@ export function JobPosts() {
     setDisLikes((prevDisLikes) => prevDisLikes + 1);
   };
   function handleCategory(event) {
-    setCategory(event.target.value)
+    setSelectedCategory(event.target.value);
+    console.log(selectedCategory);
   }
-
-
 
   return (
     <>
@@ -31,9 +32,10 @@ export function JobPosts() {
         <form onChange={handleCategory}>
           <label >Choose a field:</label>
           <select id="Jobs" name="Jobs" size="1">
-            <option value={1}>gamer</option>
-            <option value={2}>youtube gamer</option>
-            <option value={3}>youtube flamer</option>
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>{category.name}</option>
+            ))
+            }
           </select>
         </form>
         <h1>Category Name</h1>
@@ -41,56 +43,51 @@ export function JobPosts() {
 
         <div>
           <div>
-            {posts.map((post) => (
-              <div key={post.id}>
-                {(() => {
-                  console.log('post.category_id')
-                  console.log(post.category_id)
-                  console.log('category')
-                  console.log(category)
-                  if (post.category_id == category) {
-                    return (
-                      <div>
+            {
+              posts.map((post) => (
+                <div key={post.id}>
+                  {(() => {
+                    if (post.category_id == selectedCategory) {
+                      console.log(post.category_id)
+                      console.log(selectedCategory)
+                      return (
                         <div>
-                          User: {post.user_id}
-                        </div><div>
-                          Title: {post.title}
-                        </div><div>
-                          Introduction: {post.intro}
-                        </div><div>
-                          Day to day: {post.day_to_day}
-                        </div><div>
-                          Job difficulty: {post.difficulty}/10
-                        </div><div>
-                          Expected salary range from: {post.expected_salary_range_from} to: {post.expected_salary_range_to}
-                        </div><div>
-                          Industry growth: {post.industry_growth}
-                        </div><div>
-                          Work life balance: {post.work_life_balance}
-                        </div><div>
-                        </div><div>
-                          Career Path: {post.career_path}
-                        </div><div>
-                          good post: {post.upvotes}
-                        </div><div>
-                          bad post: {post.downvotes}
-                        </div>
-                        <button><a>Link to Deep Dive</a></button>
-                        <div> _</div>
-                      </div>)
-                  }
-                })()}
-              </div>
+                          <div>
+                            User: {post.user_id}
+                          </div><div>
+                            Title: {post.title}
+                          </div><div>
+                            Introduction: {post.intro}
+                          </div><div>
+                            Day to day: {post.day_to_day}
+                          </div><div>
+                            Job difficulty: {post.difficulty}/10
+                          </div><div>
+                            Expected salary range from: {post.expected_salary_range_from} to: {post.expected_salary_range_to}
+                          </div><div>
+                            Industry growth: {post.industry_growth}
+                          </div><div>
+                            Work life balance: {post.work_life_balance}
+                          </div><div>
+                          </div><div>
+                            Career Path: {post.career_path}
+                          </div><div>
+                            good post: {post.upvotes}
+                          </div><div>
+                            bad post: {post.downvotes}
+                          </div>
+                          <button><a>Link to Deep Dive</a></button>
+                          <div> _</div>
+                        </div>)
+                    }
+                  })()}
+                </div>
 
-            ))
+              ))
             }
           </div>
         </div>
-
-
-
       </div>
-
       <div>
         <button onClick={handleIncrementLikes}>(Bootstrap thumbs up)</button>
         <h5>Count is {likes}</h5>
