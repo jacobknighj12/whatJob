@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6dfa2b7f-7bdc-41a3-92f0-74f6000dc01b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/whatJob.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/what-job-react/src/components/reportalert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/app/controllers/reportalert_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/app/debug.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/app/mailers/report_alert_mailer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/app/models/reportalert.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/app/views/report_alert_mailer/report_alert_email.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/app/views/report_alert_mailer/report_alert_email.text.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/db/migrate/20220207050126_create_reportalerts.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/db/migrate/20220210004834_remove_postid_from_reportalerts.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/db/migrate/20220210005405_add_posturl_to_reportalerts.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/spec/mailers/previews/report_alert_mailer_preview.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/spec/mailers/report_alert_mailer_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/spec/models/reportalert_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/whatJobRailsAPI/spec/requests/reportalert_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-job-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-job-react/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-job-react/src/components/DeepDivePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/components/DeepDivePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-job-react/src/components/NewPostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/components/NewPostPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-job-react/src/components/PostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/components/PostPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-job-react/src/helpers/TextHelper.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/helpers/TextHelper.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-job-react/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatJobRailsAPI/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/whatJobRailsAPI/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatJobRailsAPI/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/whatJobRailsAPI/config/initializers/devise.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatJobRailsAPI/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/whatJobRailsAPI/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatJobRailsAPI/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/whatJobRailsAPI/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatJobRailsAPI/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/whatJobRailsAPI/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatJobRailsAPI/spec/models/contactmessage_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/whatJobRailsAPI/spec/models/contactmessage_spec.rb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="24rt66rRaKOmqMMMbLBoOK0fSjC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6dfa2b7f-7bdc-41a3-92f0-74f6000dc01b" name="Changes" comment="" />
+      <created>1644400357104</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644400357104</updated>
+      <workItem from="1644400360147" duration="386000" />
+      <workItem from="1644466899684" duration="241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
