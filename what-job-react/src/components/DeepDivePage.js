@@ -6,6 +6,12 @@ export function DeepDivePage() {
   const [disLikes, setDisLikes] = useState(0);
   const [posts, setPosts] = useState([]);
   const [post_id, setPost_Id] = useState(2);
+
+  const [pageURL, setPageURL] = useState(0);
+  useEffect(() => {
+    setPageURL(window.location.href);
+  });
+
   useEffect(() => {
     var config = {
       method: "get",
@@ -22,15 +28,16 @@ export function DeepDivePage() {
         console.log(error);
       });
   }, []);
+
   const handleReportButton = (event) => {
-    var data = post_id;
+    var data = { posturl: `http://localhost:3000/api/posts/${post_id}` };
     var config = {
       method: "post",
       url: "http://localhost:3000/api/reportalert",
       headers: {},
       data: data,
     };
-    console.log(data);
+
     axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
@@ -52,10 +59,10 @@ export function DeepDivePage() {
       {posts.map((post) => (
         <div key={post.id}>
           {(() => {
-            console.log("post.post_id");
-            console.log(post.id);
-            console.log("post_id");
-            console.log(post_id);
+            // console.log("post.post_id");
+            // console.log(post.id);
+            // console.log("post_id");
+            // console.log(post_id);
             if (post.id === post_id) {
               return (
                 <div>
@@ -94,7 +101,7 @@ export function DeepDivePage() {
       <div></div>
       <button onClick={() => setDisLikes(0)}></button>
       <div>
-        <button onClick={handleReportButton}>Report</button>
+        <button onClick={handleReportButton}>{pageURL}</button>
       </div>
     </>
   );

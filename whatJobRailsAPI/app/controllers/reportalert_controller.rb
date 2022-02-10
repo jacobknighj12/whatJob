@@ -1,16 +1,20 @@
 class ReportalertController < ApplicationController
+    rescue_from ActionController::UnpermittedParameters, with: :create
+
     def index
         @reportalert = Reportalert.all
         render json: @reportalert, status: 201
+        puts params
     end
 
     def create
-        @reportalert = Reportalert.create(reportalert_params)
+        @reportalert = Reportalert.create!(reportalert_params)
+        render json: @reportalert, status: 201
         puts "creates controller for the reportalertcontroller"
         puts "reportalert_parms"
         puts reportalert_params
         puts "all params"
-        puts params.inspect
+        puts params
         puts "checking what save returns"
         puts @reportalert.save
         if @reportalert.save
@@ -23,5 +27,5 @@ end
 
 private
     def reportalert_params
-        params.permit(:postid)
+        params.require(:reportalert).permit(:posturl)
     end
