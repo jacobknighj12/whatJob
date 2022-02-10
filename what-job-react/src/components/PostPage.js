@@ -12,8 +12,8 @@ export function JobPosts() {
     axios.get("http://localhost:3000/api/posts").then((res) => setPosts(res.data));
     console.log(posts);
     axios.get("http://localhost:3000/api/categories").then((res) => setCategories(res.data));
+    setSelectedCategory(localStorage.getItem('selectedCategory'));
   }, []);
-
 
   const handleIncrementLikes = () => {
     setLikes((prevLikes) => prevLikes + 1);
@@ -22,15 +22,18 @@ export function JobPosts() {
     setDisLikes((prevDisLikes) => prevDisLikes + 1);
   };
   function handleCategory(event) {
+    console.log(selectedCategory);
     setSelectedCategory(event.target.value);
+    localStorage.setItem('selectedCategory', selectedCategory);
+    console.log(localStorage.getItem('selectedCategory'));
   }
 
   return (
     <>
       <div>
-        <form onChange={handleCategory}>
+        <form >
           <label >Choose a field:</label>
-          <select value={seclectedCategory} id="Jobs" name="Jobs" size="1">
+          <select onChange={handleCategory} value={selectedCategory} id="Jobs" name="Jobs" size="1">
             {categories.map((category) => (
               <option key={category.id} value={category.id}>{category.name}</option>
             ))
