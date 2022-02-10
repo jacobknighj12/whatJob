@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export function JobPosts(props) {
+export function JobPosts() {
   const [likes, setLikes] = useState(0);
   const [disLikes, setDisLikes] = useState(0);
   const [posts, setPosts] = useState([]);
