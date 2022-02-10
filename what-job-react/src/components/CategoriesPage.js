@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
 var axios = require('axios');
-const currentCategory = React.createContext()
 export function CategoriesPage() {
     const [categories, setCategories] = useState([]);
 
@@ -14,7 +13,7 @@ export function CategoriesPage() {
         < div >
             <form>
                 <label >Choose a field:</label>
-                <select value={seclectedCategory} id="Jobs" name="Jobs" size="1">
+                <select id="Jobs" name="Jobs" size="1">
                     {categories.map((category) => (
                         <option key={category.id} value={category.id}>{category.name}</option>
                     ))

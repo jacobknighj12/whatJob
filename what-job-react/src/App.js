@@ -23,7 +23,7 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Signup" element={<SignupPage />} />
-          <Route path="/Categories" element={<CategoriesPage seclectedCategory={1} />} />
+          <Route path="/Categories" element={<CategoriesPage />} />
           <Route path="/NewPost" element={<NewPostPage />} />
           <Route path="/Account" element={<AccountPage />} />
           <Route path="/JobPosts" element={<JobPosts />} />
