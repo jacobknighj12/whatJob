@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MDEditor from "@uiw/react-md-editor";
 import rehypeSanitize from "rehype-sanitize";
 import axios from "axios";
@@ -8,6 +8,21 @@ export function NewPostPage() {
     const [career_path, setCareer_path] = useState("How did you get to this position, study, luck, hardship, Nepotism. As well as ways that you know that enable a person to enter this field today.");
     const [industry_growth, setIndustry_growth] = useState("How fast is this industry growing, or is it shrinking? do they have good or bad entry into the industry due to new things happening?.");
     const [work_life_balance, setWork_life_balance] = useState("how much time do you have to yourself after work? do you do extra hours constantly? do you have lots of overtime? can you get time off easily? how many hours from getting up till you get home is your average day? including travel.");
+    const [selectedCategory, setSelectedCategory] = useState(1);
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:3000/api/categories").then((res) => setCategories(res.data));
+        setSelectedCategory(localStorage.getItem('selectedCategory'));
+    }, []);
+    function handleCategory(event) {
+        let newValue = event.target.value; //why does this work? I DONT UNDERSTAND WHY I DONT WANT TO KNOW WHY BUT IT ONLY WORKS IF NEW VALUE IS PASSED IN NOT EVENT.TARGET.VALUE
+        setSelectedCategory(newValue); //not setting to the target value
+        console.log(selectedCategory); //incorrect value
+        console.log(event.target.value); //correct value
+        localStorage.setItem('selectedCategory', newValue);
+        console.log(localStorage.getItem('selectedCategory'));
+    }
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -49,10 +64,11 @@ export function NewPostPage() {
             <h2>New post</h2>
             <form onSubmit={handleSubmit}>
                 <label>Category</label>
-                <select name="category_id">
-                    <option value="1">gamer</option>
-                    <option value="2">flamer</option>
-                    <option value="3">blamer</option>
+                <select onChange={handleCategory} value={selectedCategory} id="Jobs" name="Jobs" size="1">
+                    {categories.map((category) => (
+                        <option key={category.id} value={category.id}>{category.name}</option>
+                    ))
+                    }
                 </select>
 
                 <label>Role title</label>
