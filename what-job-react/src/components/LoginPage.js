@@ -5,7 +5,7 @@ export function LoginPage() {
         <><heading className="heading">Login</heading>
 
             <form className='login-signup'>
-
+                <div className='standard-form'>
                 <label>Username</label>
                 <input></input>
                 <label className='login-signup input '>Email</label>
@@ -14,7 +14,7 @@ export function LoginPage() {
                 <input></input>
                 <button>Signup</button>
             
-        <button>Login</button></form></>
+        <button>Login</button></div></form></>
 
     )
 }
