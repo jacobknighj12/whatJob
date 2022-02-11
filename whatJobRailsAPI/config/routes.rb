@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         sessions: 'users/sessions',
         registrations: 'users/registrations'
     }
+
     get '/categories', to: 'categories#index'
     get '/posts', to: 'posts#index'
     post '/posts', to: 'posts#create'

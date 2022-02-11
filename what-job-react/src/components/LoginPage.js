@@ -35,16 +35,21 @@ export function LoginPage() {
     const [user, setUser] = useState()
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>Email</label>
-                <input type='email' name='email'></input>
-                <label>Password</label>
-                <input type='current-password' name='password'></input>
-                <button><a href='/'>Login</a></button>
+
+        <>
+            <heading className="heading">Login</heading>
+            <form onSubmit={handleSubmit} classname='login-signup'>
+                <div className='standard-form'>
+                    <label>Email</label>
+                    <input type='email' name='email'></input>
+                    <label>Password</label>
+                    <input type='current-password' name='password'></input>
+                    <button><a href='/'>Login</a></button>
+                </div>
             </form>
             <a href='/Signup'>
                 <button>Signup</button></a>
-        </div>
+        </>
+
     )
 }

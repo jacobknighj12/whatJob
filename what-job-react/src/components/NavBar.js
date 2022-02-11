@@ -1,9 +1,16 @@
 import React from 'react'
+import { ReactComponent as Logo } from './whatjob_logo.svg';
 export function NavBar() {
     return (
-        <div>
-            <img src='whatJob-logo.JPG' style={{ width: 600 }}></img>
-            <img src=''></img>
+        <nav className='nav'>
+
+            {/* Background image          */}
+            
+            {/* <img src='' /> */}
+            <div className='nav-logo'>
+            <Logo />
+            </div>
+            <div className='nav-buttons'>
             <a href='/'>
                 <button>Home</button></a>
             <a href='/Categories'>
@@ -15,5 +22,7 @@ export function NavBar() {
             < a href='/Login' ><button>Login</button></a>
             <a href='/Signup'><button>Signup</button></a>
         </div >
+</nav>
+
     )
 }

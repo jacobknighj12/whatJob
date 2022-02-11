@@ -3,39 +3,345 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: top;
+  /* align-items: top;
   justify-content: top;
   font-size: calc(10px + 2vmin);
+  color: white; */
+}
+
+
+
+
+/* default is mobile */
+.nav{
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+
+.nav-logo{
+  grid-column: 1 / 2;
+  /* grid-template-rows: 1fr; */
+  padding: 5% 15% 0% 15%;
+  align-self: center;
+}
+
+.nav-buttons{
+  grid-column: 2 / 2;
+  padding: 10% 28% 0px 5%;
+  
+  /* grid-template-rows: 1fr; */
+}
+
+
+.nav button{
+  border: steelblue 10px;
+  margin: 5%;
+  width: 100%;
+  padding: 2px;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+}
+
+/* Page Heading */
+.heading {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  font-weight: 700;
   color: white;
 }
 
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* classess for the front page */
+.introduction {
+  text-align: center;
+  padding: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.introduction-buttons {
+  margin: 30px;
+  text-align: center;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  /* width: 50%; */
+  border-radius: 18px;
+  justify-content: space-evenly;
+}
+
+
+.introduction button {
+  align-self: center;
+  text-align: center;
+  padding: 2px;
+
+  width: 100px;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+}
+
+/* Login-signup */
+
+.login-signup form {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 50px 0 50px;
+}
+
+.standard-form input {
+  margin: 10px;
+  grid-column: 1;
+  width: 90%;
+  padding: 2px;
+
+  border-radius: 18px;
+
+}
+
+.button-group {
+  /* display: flex;
+  flex-direction: row; */
+  grid-column: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.standard-form button {
+  margin: 10px;
+  padding: 2px;
+  width: 40%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+
+}
+
+.login-signup label {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  /* background-color: turquoise; */
+  padding: 2px;
+  justify-self: center;
+}
+
+/* Tablet */
+@media screen and (min-width: 650px) and (max-width:1023px) {
+  .nav{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    height: 300px;
+  }
+  
+  
+  .nav-logo{
+    grid-column: 1 / 2;
+    padding: 5% 15% 0% 15%;
+    align-self: center;
+    height: 300px;
+  }
+  
+  .nav-buttons{
+    grid-column: 2 / 2;
+    padding: 9% 25% 0px 10%;   
+  }
+  
+  
+  .nav button{
+    border: steelblue 10px;
+    margin: 10px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    padding: 2px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  }
+
+
+
+/* signup and login form */
+
+  .login-signup form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 0 50px 0 50px;
+  }
+  
+  .login-signup input {
+    margin: 10px;
+    grid-column: 2 / 2;
+    /* /* margin: 30px; */
+    width: 400px;
+    padding: 2px;
+    /* width: 50%; */
+    border-radius: 18px;
+    /* justify-content: space-evenly */
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    grid-column: 2;
+  
+  }
+  
+  .login-signup button {
+    margin: 10px;
+    align-self: center;
+    text-align: center;
+    padding: 2px;
+    
+    width: 150px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  
+  }
+  
+  .login-signup label {
+    grid-column: 1 / 2;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    /* background-color: turquoise; */
+    text-align: right;
+    padding: 2px;
+    justify-self: end;
+    width: 100px;
+  
   }
 }
 
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Desktop - Still in beta */
+@media screen and (min-width: 1024px) {
+  .nav{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    align-content: center;
+    grid-auto-flow: row;
   }
-  to {
-    transform: rotate(360deg);
+  
+  
+  .nav-logo{
+    grid-column: 1 / 2;
+    /* grid-row: 1; */
+    padding: 10% 15% 5% 15%;
+    align-self: center;
+    /* justify-self: center; */
   }
+  
+  .nav-buttons{
+    /* background-color: tomato; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* grid-column: 1fr 1fr 1fr 1fr; */
+    padding: 55px 50px 0px 30px;   
+  }
+  
+  
+  .nav button{
+    border: steelblue 10px;
+    /* margin: 5px; */
+    padding: 15px;
+    width: 120px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    /* align-self: center;
+    justify-self: center; */
+  }
+
+  .introduction {
+    text-align: center;
+    padding: 30px 10% 30px 10%;
+  }
+  .introduction-buttons {
+    padding: 0px 10% 0px 10%;
+    margin: 30px;
+    padding: 2px;
+    /* display: flex;
+    flex-direction: row; */
+    /* width: 50%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    border-radius: 18px;
+    column-gap: 30px;
+    /* justify-content: space-between; */
+    /* background-color: tomato; */
+    /* place-items: center; */
+    /* box-align: center;
+    align-items: center */
+  }
+  
+  
+  .introduction button {
+
+    padding: 2px;
+
+    width: 100px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  }
+/* signup and login form */
+  .login-signup form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 50px 0 50px;
+  }
+  
+  .login-signup input {
+    margin: 10px;
+    grid-column: 2 / 2;
+
+    width: 400px;
+    padding: 2px;
+
+    border-radius: 18px;
+
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    grid-column: 2;
+  
+  }
+  
+  .login-signup button {
+    margin: 10px;
+    align-self: center;
+    text-align: center;
+    padding: 2px;
+    
+    width: 150px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  
+  }
+  
+  .login-signup label {
+    grid-column: 1 / 2;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    /* background-color: turquoise; */
+    text-align: right;
+    padding: 2px;
+    justify-self: end;
+    width: 100px;
+  
+  }
+
 }
-select{
-  width: 25rem;
-  height: 2rem;
-  font-size: 20px;
-}
+
+
