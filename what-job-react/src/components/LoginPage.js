@@ -2,9 +2,9 @@ import React from 'react'
 
 export function LoginPage() {
     return (
-        <><heading></heading>
+        <><heading className="heading">Login</heading>
 
-            <form>
+            <form className='login-signup'>
 
                 <label>Username</label>
                 <input></input>

@@ -5,8 +5,8 @@ export function NewPostPage() {
 
     return (
         <div>
-            <h2>New post</h2>
-            <form>
+            <header>New post</header>
+            <form className='login-signup'>
 
                 <label>Role title</label>
                 <input></input>
