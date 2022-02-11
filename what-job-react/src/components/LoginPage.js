@@ -35,8 +35,11 @@ export function LoginPage() {
     const [user, setUser] = useState()
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+
+        <>
+              <heading className="heading">Login</heading>
+            <form onSubmit={handleSubmit} classname='login-signup'>
+                      <div className='standard-form'>
                 <label>Email</label>
                 <input type='email' name='email'></input>
                 <label>Password</label>
@@ -45,6 +48,7 @@ export function LoginPage() {
             </form>
             <a href='/Signup'>
                 <button>Signup</button></a>
-        </div>
+        </div></>
+
     )
 }

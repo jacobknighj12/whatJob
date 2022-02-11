@@ -61,8 +61,9 @@ export function NewPostPage() {
     }
     return (
         <div>
-            <h2>New post</h2>
-            <form onSubmit={handleSubmit}>
+
+            <header>New post</header>
+            <form onSubmit={handleSubmit} className='login-signup'>
                 <label>Category</label>
                 <select onChange={handleCategory} value={selectedCategory} id="Jobs" name="Jobs" size="1">
                     {categories.map((category) => (
@@ -70,6 +71,7 @@ export function NewPostPage() {
                     ))
                     }
                 </select>
+
 
                 <label>Role title</label>
                 <input type='text' name='title'></input>

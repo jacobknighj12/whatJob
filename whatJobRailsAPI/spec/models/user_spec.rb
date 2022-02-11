@@ -16,6 +16,15 @@ RSpec.describe User, type: :model do
     end
   end
 end
+
+
+
+
+# require 'rails_helper'
+
+# feature "User logs in and logs out" do
+
+
 #   # `js: true` spec metadata means this will run using the `:selenium`
 #   # browser driver configured in spec/support/capybara.rb
 #   scenario "with correct details", js: true do

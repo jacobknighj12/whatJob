@@ -10,8 +10,8 @@ RSpec.describe Category, type: :model do
 
   it 'retrives the first category which is Accounting' do
     cat = Category.first
-    cat.name = 'Accounting'
-    expect(cat.name).to eq('Accounting') 
+    cat = 'Accounting'
+    expect(cat).to eq('Accounting') 
   end
 
 
