@@ -1,18 +1,16 @@
-import { render, screen } from "@testing-library/react";
-import App from "./App";
+import { render, fireEvent, screen } from "@testing-library/react";
+
 import React from "react";
-import { HomePage } from "./components/HomePage";
-import { NavBar } from "./components/NavBar";
+
 import { ContactUs } from "./components/ContactUs";
-import { LoginPage } from "./components/LoginPage";
-import { SignupPage } from "./components/SignupPage";
-import { CategoriesPage } from "./components/CategoriesPage";
-import { NewPostPage } from "./components/NewPostPage";
-import { AccountPage } from "./components/AccountPage";
-import { JobPosts } from "./components/PostPage";
 
 test("renders navbar button home", () => {
-  render(<App />);
-  const buttonElement = screen.getByText(/whatJob?/i);
-  expect(buttonElement).toBeInTheDocument();
+  render(<ContactUs />);
+  const name = screen.getByText("Name");
+  // screen.debug();
+  // expect(name).toBeInTheDocument();
+  const inputName = screen.getByLabelText("Name");
+  fireEvent.change(inputName, { target: { value: "Luke" } });
+  // screen.debug(inputName);
+  expect(inputName.value).toBe("Bob");
 });

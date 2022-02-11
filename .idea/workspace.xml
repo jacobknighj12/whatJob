@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dfa2b7f-7bdc-41a3-92f0-74f6000dc01b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/what-job-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/what-job-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/what-job-react/src/components/CategoriesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/components/CategoriesPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/what-job-react/src/components/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/components/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/what-job-react/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/what-job-react/src/components/NewPostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/components/NewPostPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/what-job-react/src/components/PostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/what-job-react/src/components/PostPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatJobRailsAPI/config/initializers/cors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/whatJobRailsAPI/config/initializers/cors.rb" afterDir="false" />
-    </list>
+    <list default="true" id="6dfa2b7f-7bdc-41a3-92f0-74f6000dc01b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644400357104</updated>
       <workItem from="1644400360147" duration="386000" />
+      <workItem from="1644548428583" duration="41000" />
     </task>
     <servers />
   </component>

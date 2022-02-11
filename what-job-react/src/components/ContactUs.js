@@ -64,8 +64,16 @@ export function ContactUs(props) {
     <>
       <form onSubmit={handleSubmit}>
         <div>
-          <label name="name">Name</label>
-          <input name="name" value={values.name} onChange={handleNameChange} />
+          <label htmlFor="name" name="name">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={values.name}
+            onChange={handleNameChange}
+          />
         </div>
         <div>
           <label name="email">Email</label>
