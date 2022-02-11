@@ -31,23 +31,24 @@ function handleSubmit(event) {
 }
 export function SignupPage() {
     return (
-         <><heading className="heading">Signup</heading>
-                   
+        <><heading className="heading">Signup</heading>
+
             <form onSubmit={handleSubmit}>
-              <div className='standard-form'>
-                <label>Email</label>
-                <input type='text' name='email'></input>
-                <label>first_name</label>
-                <input type='text' name='first_name'></input>
-                <label>last_name</label>
-                <input type='text' name='last_name'></input>
-                <label>Password</label>
-                <input type='password' name='password'></input>
-                <button><a href='/Login'>Signup</a></button>
+                <div className='standard-form'>
+                    <label>Email</label>
+                    <input type='text' name='email'></input>
+                    <label>first_name</label>
+                    <input type='text' name='first_name'></input>
+                    <label>last_name</label>
+                    <input type='text' name='last_name'></input>
+                    <label>Password</label>
+                    <input type='password' name='password'></input>
+                    <button><a href='/Login'>Signup</a></button>
+                </div>
             </form>
             <a href='/Login'>
                 <button>Login</button></a>
-        </div></>
+        </>
 
     )
 }
