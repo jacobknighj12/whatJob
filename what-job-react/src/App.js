@@ -14,6 +14,7 @@ import { DeepDivePage } from "./components/DeepDivePage";
 import { ReportAlert } from "./components/reportalert";
 function App() {
   // const [darkMode, setDarkMode] = useContext(false)
+  // const [category, setCategory] = useContext(false)
   return (
     <div className="App">
       <NavBar />
