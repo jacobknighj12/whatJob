@@ -10,11 +10,7 @@ export function JobPosts() {
   useEffect(() => {
     axios.get("http://localhost:3000/api/posts").then((res) => setPosts(res.data));
     axios.get("http://localhost:3000/api/categories").then((res) => setCategories(res.data));
-    // console.log('local')
-    // console.log(localStorage.getItem('selectedCategory'))
     setSelectedCategory(localStorage.getItem('selectedCategory'));
-    // console.log('selected state')
-    // console.log(selectedCategory)
   }, []);
 
   const handleIncrementLikes = () => {
