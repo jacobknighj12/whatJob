@@ -22,6 +22,11 @@ export function NavBar() {
             < a href='/Login' ><button>Login</button></a>
             <a href='/Signup'><button>Signup</button></a>
         </div >
+<<<<<<< HEAD
         </nav>
+=======
+</nav>
+
+>>>>>>> 9c6e6b314d94a99ce8b695e8efc09736b5d24579
     )
 }

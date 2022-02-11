@@ -31,8 +31,10 @@ function handleSubmit(event) {
 }
 export function SignupPage() {
     return (
-        <div>
+         <><heading className="heading">Signup</heading>
+                   
             <form onSubmit={handleSubmit}>
+              <div className='standard-form'>
                 <label>Email</label>
                 <input type='text' name='email'></input>
                 <label>first_name</label>
@@ -42,9 +44,10 @@ export function SignupPage() {
                 <label>Password</label>
                 <input type='password' name='password'></input>
                 <button><a href='/Login'>Signup</a></button>
-            </form>
+                </div></form>
             <a href='/Login'>
                 <button>Login</button></a>
-        </div>
+        </>
+
     )
 }
