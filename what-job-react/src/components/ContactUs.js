@@ -76,16 +76,21 @@ export function ContactUs(props) {
           />
         </div>
         <div>
-          <label name="email">Email</label>
+          <label htmlFor="name" name="name">
+            Email
+          </label>
           <input
+            type="text"
+            id="testemail"
             name="email"
             value={values.email}
             onChange={handleEmailChange}
           />
         </div>
         <div>
-          <label htmlFor="message">message</label>
+          <label htmlFor="message">Message</label>
           <textarea
+            type="text"
             id="message"
             name="message"
             value={values.message}
