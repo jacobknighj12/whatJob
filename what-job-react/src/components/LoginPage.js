@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 var axios = require('axios');
 
-function handleSubmit(event, setUser) {
+function handleSubmit(event) {
     event.preventDefault();
     var FormData = require('form-data');
     var data = new FormData();
@@ -41,7 +41,7 @@ export function LoginPage() {
                 <input type='email' name='email'></input>
                 <label>Password</label>
                 <input type='current-password' name='password'></input>
-                <button >Login</button>
+                <button><a href='/'>Login</a></button>
             </form>
             <a href='/Signup'>
                 <button>Signup</button></a>
