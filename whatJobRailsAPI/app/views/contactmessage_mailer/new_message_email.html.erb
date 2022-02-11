@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>You got a new contact request <%= @contactmessage.name %>!</p>
+    <p>
+      Contact details<br />
+      --------------------------
+    </p>
+    <p>Name: <%= @contactmessage.name %></p>
+    <p>Email: <%= @contactmessage.email %></p>
+    <p>
+      Message:<br />
+      ----------
+    </p>
+    <p><%= @contactmessage.message %></p>
+  </body>
+</html>

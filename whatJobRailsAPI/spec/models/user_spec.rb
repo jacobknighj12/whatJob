@@ -1,15 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # pending "add some examples to (or delete) #{__FILE__}"
+
+
+
+  feature "create new user" do
+    it 'creates a new user' do
+      newUser = User.new
+      newUser.email = 'testuser@cat.com'
+      newUser.password = 'passwordRspec'
+      newUser.password_confirmation = 'passwordRspec'
+      expect(newUser.email).to eq('testuser@cat.com') 
+      expect(newUser.email).to eq('passwordRspec') 
+    end
+  end
 end
-
-
-
-# require 'rails_helper'
-
-# feature "User logs in and logs out" do
-
 #   # `js: true` spec metadata means this will run using the `:selenium`
 #   # browser driver configured in spec/support/capybara.rb
 #   scenario "with correct details", js: true do
