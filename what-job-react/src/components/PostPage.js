@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -101,9 +100,6 @@ export function JobPosts() {
       <button onClick={() => setLikes(0)}></button>
       <div></div>
       <button onClick={() => setDisLikes(0)}></button>
-      <div>
-        <button>Report</button>
-      </div>
     </>
   );
 }

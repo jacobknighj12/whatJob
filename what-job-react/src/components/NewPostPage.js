@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import MDEditor from '@uiw/react-md-editor';
+import React, { useState } from "react";
+import MDEditor from "@uiw/react-md-editor";
 import rehypeSanitize from "rehype-sanitize";
 import axios from "axios";
 export function NewPostPage() {
