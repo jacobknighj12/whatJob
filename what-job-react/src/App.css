@@ -1,366 +1,420 @@
-:root {
-  /* :root is a clever way of saying "the outer-most element" */
-  --category-image: 31; /* the default */
-}
+  :root {
+    /* :root is a clever way of saying "the outer-most element" */
+    --category-image: 31; /* the default */
+    color: white;
+  }
 
-.App {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /* align-items: top;
-  justify-content: top;
-  font-size: calc(10px + 2vmin);
-  color: white; */
-}
+  a:link {
+    text-decoration: none;
+  }
+
+  .App {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
 /* default is mobile */
-.nav{
-  text-decoration: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: center;
-}
+  .nav{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+  }
 
-.nav-logo{
-  grid-column: 1 / 2;
-  /* grid-template-rows: 1fr; */
-  padding: 5% 15% 0% 15%;
-  align-self: center;
-}
+  .nav-logo{
+    grid-column: 1 / 2;
+    /* grid-template-rows: 1fr; */
+    padding: 5% 15% 0% 15%;
+    align-self: center;
+  }
 
-.nav-buttons{
-  grid-column: 2 / 2;
-  padding: 10% 28% 0px 5%;
-  
-  /* grid-template-rows: 1fr; */
-}
+  .nav-buttons{
+    grid-column: 2 / 2;
+    padding: 10% 28% 0px 5%;
+    
+    /* grid-template-rows: 1fr; */
+  }
 
 
-.nav button{
-  border: steelblue 10px;
-  margin: 5%;
-  width: 100%;
-  padding: 2px;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-}
+  .nav button{
+    border: steelblue 10px;
+    margin: 5%;
+    width: 100%;
+    padding: 2px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  }
 
 /* Page Heading */
-heading {
-  text-align: center;
-  font-size: 30px;
-  padding: 20px;
-  font-weight: 700;
-  color: white;
-}
+  heading {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    font-weight: 700;
+  }
 
 /* classess for the front page */
-.introduction {
-  text-align: center;
-  padding: 30px;
-  color: white;
-}
+  .introduction {
+    text-align: center;
+    padding: 30px;
+  }
 
-.introduction-buttons {
-  margin: 30px;
-  text-align: center;
-  padding: 2px;
-  display: flex;
-  flex-direction: row;
-  /* width: 50%; */
-  border-radius: 18px;
-  justify-content: space-evenly;
-}
+  .introduction-buttons {
+    margin: 30px;
+    text-align: center;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    /* width: 50%; */
+    border-radius: 18px;
+    justify-content: space-evenly;
+  }
 
 
-.introduction button {
-  align-self: center;
-  text-align: center;
-  padding: 2px;
+  .introduction button {
+    align-self: center;
+    text-align: center;
+    padding: 2px;
 
-  width: 100px;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-}
+    width: 100px;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  }
 
 /* standard-form */
 
-.standard-form form {
-  display: grid;
-  grid-template-columns: 1fr;
-  /* padding: 0 50px 0 50px; */
-}
+  .standard-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* padding: 0 50px 0 50px; */
+  }
 
-.standard-form input {
-  margin: 10px;
-  grid-column: 1;
-  width: 90%;
-  padding: 2px;
+  .standard-form input {
+    margin: 10px;
+    grid-column: 1;
+    width: 90%;
+    padding: 2px;
+    border-radius: 18px;
+  }
 
-  border-radius: 18px;
+  .standard-form button {
+    margin: 10px;
+    padding: 2px;
+    width: 40%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
 
-}
-
-/* .button-group {
-  display: flex;
-  flex-direction: row;
-  grid-column: 1;
-  text-align: center;
-  margin: 10px;
-} */
-
-.standard-form button {
-  margin: 10px;
-  padding: 2px;
-  width: 40%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: center;
-}
-
-.standard-form label {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-  /* background-color: turquoise; */
-  padding: 2px;
-  justify-self: center;
-}
+  .standard-form label {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 2px;
+    justify-self: center;
+  }
 
 
-.standard-form textarea {
-  grid-column: 1;
-  margin: 10px;
-  height: 150px;
-  width: 90%;
-  padding: 2px;
-  resize: none;
-  border-radius: 18px;
-}
+  .standard-form textarea {
+    grid-column: 1;
+    margin: 10px;
+    height: 150px;
+    width: 90%;
+    padding: 2px;
+    resize: none;
+    border-radius: 18px;
+  }
+
+  /* My Account */
+
+  .my-account {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 30px;
+    /* padding: 0 50px 0 50px; */
+  }
+
+  .my-account input {
+    grid-column: 1;
+    width: 90%;
+    padding: 2px;
+    grid-column: 1 / 2;
+    border-radius: 18px;
+  }
+
+  .edit-my-account
+  {
+    text-align: center
+  }
+
+  #new-post a {
+    margin: 10px auto;
+    /* padding: 2px;
+    width: 70%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-content: center; */
+  }
+
+  /* .edit-my-account button {
+    margin: 10px auto;
+    padding: 2px;
+    width: 70%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-content: center;
+  } */
+
+  .my-account button {
+    grid-column: 2 / 3;
+    margin: 10px;
+    padding: 2px;
+    width: 90%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
+
+  .my-account label {
+    grid-column: 1 / 2;
+    /* color: white; */
+    margin: 10px;
+    /* background-color: turquoise; */
+    padding: 2px;
+    justify-self: center;
+  }
+
+  .my-account textarea {
+    grid-column: 1;
+    margin: 10px;
+    height: 150px;
+    width: 90%;
+    padding: 2px;
+    resize: none;
+    border-radius: 18px;
+  }
+
+  /* deep-dive */
+  .deep-dive{
+    text-align: left;
+    padding: 0 30px;
+    /* color: white; */
+  }
+  .deep-dive button {
+    align-self: center;
+    text-align: center;
+    padding: 2px;
+
+    width: 50%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+  }
+  .deep-dive p {
+    text-align: left;
+    line-height: 40px;
+    /* color: white; */
+  }
+  .deep-dive label {
+    align-self: center;
+    text-align: center;
+    padding: 2px;
+    font-weight: 700;
+    width: 50%;
+  }
 
 
+/* category select - except New Post */
+  .category-select {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 20px; 
+  }
+  .category-select button {
+    grid-column: 1;
+    margin: 10px;
+    padding: 2px;
+    width: 40%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
+  .category-form-select {
+    position: relative;
+    grid-column: 1;
+  }
 
+  .category-form-select select {
+    display: none; /*hide original SELECT element: */
+  }
 
-/* My Account */
+  .select-selected {
+    background-color: white;
+  }
 
-.my-account {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 30px;
-  /* padding: 0 50px 0 50px; */
-}
+  .category-select label {
+    grid-column: 1;
+    justify-self: center;
+    margin: 10px;
+    padding: 2px;
+  }
 
-.my-account input {
-  
-  grid-column: 1;
-  width: 90%;
-  padding: 2px;
-  grid-column: 1 / 2;
-  border-radius: 18px;
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
 
-}
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
 
-.edit-my-account
-{
-  text-align: center
-}
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
 
-#new-post a {
-  
-  margin: 10px auto;
-  /* padding: 2px;
-  width: 70%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-content: center; */
-}
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: rgb(16, 54, 92);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
 
-.edit-my-account button {
-  
-  margin: 10px auto;
-  padding: 2px;
-  width: 70%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-content: center;
-}
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
 
-
-
-/* .button-group {
-  display: flex;
-  flex-direction: row;
-  grid-column: 1;
-  text-align: center;
-  margin: 10px;
-} */
-
-.my-account button {
-  grid-column: 2 / 3;
-  margin: 10px;
-  padding: 2px;
-  width: 90%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: center;
-}
-
-.my-account label {
-  grid-column: 1 / 2;
-  color: white;
-  margin: 10px;
-  /* background-color: turquoise; */
-  padding: 2px;
-  justify-self: center;
-}
-
-
-.my-account textarea {
-  grid-column: 1;
-  margin: 10px;
-  height: 150px;
-  width: 90%;
-  padding: 2px;
-  resize: none;
-  border-radius: 18px;
-}
-
-.my-account textarea {
-  grid-column: 1;
-  margin: 10px;
-  height: 150px;
-  width: 90%;
-  padding: 2px;
-  resize: none;
-  border-radius: 18px;
-}
-
-
-
-
-/* deep-dive */
-.deep-dive{
-  text-align: left;
-  padding: 0 30px;
-  color: white;
-}
-.deep-dive button {
-  align-self: center;
-  text-align: center;
-  padding: 2px;
-
-  width: 50%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-}
-.deep-dive p {
-  text-align: left;
-  line-height: 40px;
-  color: white;
-}
-.deep-dive label {
-  align-self: center;
-  text-align: center;
-  padding: 2px;
-  font-weight: 700;
-  width: 50%;
-
-}
-
-
-
-/* category select */
-.category-select {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0 20px;
-  
-
-}
-.category-select button {
-  grid-column: 1;
-  margin: 10px;
-  padding: 2px;
-  width: 40%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: center;
-}
-.category-form-select {
-  position: relative;
-  grid-column: 1;
-}
-
-.category-form-select select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-  background-color: white;
-}
-
-
-.category-select label {
-  grid-column: 1;
-  color: white;
-
-  justify-self: center;
-  margin: 10px;
-  /* background-color: turquoise; */
-  padding: 2px;
-}
-
-
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-}
-
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: rgb(16, 54, 92);
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
+  .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
-}
+  }
+
+/* Jobs Posts Page */
+  .jobs-by-category {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 30px;
+  }
+
+  .jobs-by-category h1 {
+
+    margin: 0 20px;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 0 10px 0;
+    font-weight: 700;
+
+  }
+  .jobs-by-category h2 {
+    margin: 0 20px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 700;
+  }
+
+  .jobs-by-category button {  
+    margin: 10px;
+    padding: 2px;
+    width: 40%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
+
+  .jobs-by-category label {
+    align-self: left;
+    text-align: left;
+    padding: 2px;
+    font-weight: 700;
+    width: 50%;
+  }
+
+  .jobs-by-category-border {
+    margin: 20px;
+    padding-top: 30px;
+    border-radius: 18px;
+    border-color: white;
+    border: 3px solid white ;
+    box-shadow: 10px 10px black;
+  }
+
+/* New Posts Page   */
+  .new-post {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .new-post label {
+    font-size: 20px;
+    font-weight:700;
+    padding: 15px;
+    text-align: center;
+  }
+  .new-post h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    align-self: left;
+  }
+
+  .new-post-base button {
+    margin: 10px;
+    padding: 2px;
+    width: 60%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    place-content: center;
+  }
+
+  .new-post-base input {
+    margin: 10px;
+    grid-column: 1;
+    width: 90%;
+    padding: 2px;
+    border-radius: 18px;
+    height: 30px;
+  }
+
+  .new-post-base label{
+    position: relative;
+    grid-column: 1 / 2;
 
 
+  }
+  .new-post-base label{
+    position: relative;
+    grid-column: 1 / 2;
+
+
+  }
+
+  /* BUG - Way too big */
+  .new-post-base-select {
+    position: relative;
+    grid-column: 2 / 3;
+    height:30px;
+  }
+ 
 
 /* Tablet */
 @media screen and (min-width: 650px) and (max-width:1023px) {
@@ -372,8 +426,7 @@ heading {
     justify-content: center;
     height: 300px;
   }
-  
-  
+    
   .nav-logo{
     grid-column: 1 / 2;
     padding: 5% 15% 0% 15%;
@@ -411,12 +464,9 @@ heading {
   .standard-form input {
     margin: 10px;
     grid-column: 2 / 2;
-    /* /* margin: 30px; */
     width: 400px;
     padding: 2px;
-    /* width: 50%; */
     border-radius: 18px;
-    /* justify-content: space-evenly */
   }
   
   .button-group {
@@ -425,31 +475,41 @@ heading {
     grid-column: 2;
   
   }
-  
+ 
+  #signup-button-box {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+   
+    padding: 0 50px 0 50px;
+  }
+  #signup-button {
+    grid-column: 2;
+    justify-self: left;
+    
+  }
+
+
   .standard-form button {
+    grid-column: 2 / 3;
     margin: 10px;
-    align-self: center;
+    
     text-align: center;
     padding: 2px;
-    
-    width: 150px;
+    width: 200px;
     border-radius: 18px;
     box-shadow: 10px 10px;
-    justify-self: center;
+    justify-self: left;
   }
   
   .standard-form label {
     grid-column: 1 / 2;
-    color: white;
     display: flex;
     flex-direction: row;
     margin: 10px;
-    /* background-color: turquoise; */
     text-align: right;
     padding: 2px;
     justify-self: end;
     width: 100px;
-  
   }
   .standard-form textarea {
     margin: 10px;
@@ -488,13 +548,7 @@ heading {
 }
 
 #new-post a {
-  
   margin: 10px auto;
-  /* padding: 2px;
-  width: 70%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-content: center; */
 }
 
 .edit-my-account button {
@@ -506,16 +560,6 @@ heading {
   box-shadow: 10px 10px;
   justify-content: center;
 }
-
-
-
-/* .button-group {
-  display: flex;
-  flex-direction: row;
-  grid-column: 1;
-  text-align: center;
-  margin: 10px;
-} */
 
 .my-account button {
   grid-column: 2 / 3;
@@ -529,13 +573,9 @@ heading {
 
 .my-account label {
   grid-column: 1 / 2;
-  color: white;
   justify-self: right;
   margin: 10px;
-  /* background-color: turquoise; */
   padding: 2px;
-  /* text-align: right; */
-
 }
 
 
@@ -589,18 +629,219 @@ heading {
   background-color: white;
 }
 
-
 .category-select label {
   grid-column: 1 / 2;
-  color: white;
-
   justify-self: right;
   margin: 10px;
-  /* background-color: turquoise; */
   padding: 2px;
 }
 
+/* Jobs Posts Page */
+  .jobs-by-category {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 60px;  
+  }
 
+  .jobs-by-category h1 {
+    margin: 0 20px;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 0 10px 0;
+    font-weight: 700;
+  }
+  .jobs-by-category h2 {
+    margin: 0 20px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 700;
+  }
+
+  .jobs-by-category button {  
+    margin: 10px;
+    padding: 2px;
+    width: 40%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
+
+  .jobs-by-category label {
+    align-self: left;
+    text-align: left;
+    padding: 2px;
+    font-weight: 700;
+    width: 50%;
+  }
+
+  .jobs-by-category-border {
+    margin: 20px 100px;
+    padding-top: 30px;
+    border-radius: 18px;
+    border-color: white;
+    border: 3px solid white ;
+    box-shadow: 10px 10px black;
+  }
+
+  /* Jobs Posts Page */
+  .jobs-by-category {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 30px;
+  }
+
+  .jobs-by-category h1 {
+
+    margin: 0 20px;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 0 10px 0;
+    font-weight: 700;
+
+  }
+  .jobs-by-category h2 {
+    margin: 0 20px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 700;
+  }
+
+  .jobs-by-category button {  
+    margin: 10px;
+    padding: 2px;
+    width: 40%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
+
+  .jobs-by-category label {
+    align-self: left;
+    text-align: left;
+    padding: 2px;
+    font-weight: 700;
+    width: 50%;
+  }
+
+  .jobs-by-category-border {
+    margin: 20px;
+    padding-top: 30px;
+    border-radius: 18px;
+    border-color: white;
+    border: 3px solid white ;
+    box-shadow: 10px 10px black;
+  }
+
+/* New Posts Page   */
+  .new-post {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .new-post label {
+    grid-column: 1 / 2;
+    font-size: 20px;
+    font-weight:700;
+    padding: 15px;
+    text-align: center;
+    justify-self: center;
+  }
+  .new-post h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    align-self: left;
+  }
+
+  .new-post button {
+    text-decoration: none;
+  }
+
+  .new-post-base {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+  }
+
+  .new-post-base button {
+    margin: 10px;
+    padding: 2px;
+    width: 40%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
+
+  .new-post-base input {
+    margin: 10px;
+    grid-column: 1;
+    width: 90%;
+    padding: 2px;
+    border-radius: 18px;
+    grid-column: 2 / 3;
+  }
+  
+/* New Posts Page   */
+  .new-post {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .new-post label {
+    font-size: 20px;
+    font-weight:700;
+    padding: 15px;
+    text-align: center;
+  }
+  .new-post h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    align-self: left;
+  }
+
+  .new-post button {
+    text-decoration: none;
+  }
+
+  .new-post-base button {
+    grid-column: 2 / 3;
+    margin: 10px;
+    padding: 2px;
+    width: 40%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
+
+  .new-post-base input {
+    margin: 10px;
+    grid-column: 2 / 3;
+    width: 90%;
+    padding: 2px;
+    border-radius: 18px;
+    height: 30px;
+  }
+
+  .new-post-base label{
+    position: relative;
+    grid-column: 1 / 2;
+  }
+  .new-post-base label{
+    position: relative;
+    grid-column: 1 / 2;
+  }
+
+  /* BUG - Way too big */
+  .new-post-base-select {
+    position: relative;
+    grid-column: 2 / 3;
+    height:30px;
+  }
 
 
 }
@@ -670,9 +911,7 @@ heading {
   
   
   .introduction button {
-
     padding: 2px;
-
     width: 100px;
     border-radius: 18px;
     box-shadow: 10px 10px;
@@ -680,53 +919,39 @@ heading {
 /* signup and login form */
   .standard-form form {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     padding: 0 50px 0 50px;
   }
   
   .standard-form input {
     margin: 10px;
     grid-column: 2 / 3;
-
     width: 400px;
     padding: 2px;
-
     border-radius: 18px;
-
   }
-  
-  /* .button-group {
-    display: flex;
-    flex-direction: row;
-    grid-column: 2;
-  
-  } */
-  
+
   .standard-form button {
     margin: 10px;
     align-self: center;
     text-align: center;
     padding: 2px;
     text-decoration: none;
-    width: 150px;
+    width: 200px;
     border-radius: 18px;
     box-shadow: 10px 10px;
     grid-column: 2 / 3;
+    justify-self: left;
   }
   
   .standard-form label {
     grid-column: 1 / 2;
-    color: white;
-    display: flex;
-    flex-direction: row;
+    /* color: white; */
     margin: 10px;
-    /* background-color: turquoise; */
-    /* text-align: right; */
     padding: 2px;
-    place-self: right;
+    justify-self: right;
     width: 100px;
-  
-  }
+   }
   .standard-form textarea {
     margin: 10px;
     grid-column: 2 / 3;
@@ -735,105 +960,103 @@ heading {
     padding: 2px;
     resize: none;
     border-radius: 18px;
-
   }
+
+  #signup-button-box {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 0 50px 0 50px;
+  }
+  
+  #signup-button {
+    grid-column: 2;
+    justify-self: left;
+  }
+
+
 
 
 /* My Account */
 
-.my-account {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 25%;
-  /* padding: 0 50px 0 50px; */
-}
+  .my-account {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 25%;
+    /* padding: 0 50px 0 50px; */
+  }
 
-.my-account input {
-  
-  grid-column: 1;
-  width: 90%;
-  padding: 2px;
-  grid-column: 1 / 2;
-  border-radius: 18px;
+  .my-account input {
+    
+    grid-column: 1;
+    width: 90%;
+    padding: 2px;
+    grid-column: 1 / 2;
+    border-radius: 18px;
 
-}
+  }
 
-.edit-my-account
-{
-  text-align: center
-}
+  .edit-my-account
+  {
+    text-align: center
+  }
 
-#new-post a {
-  
-  margin: 10px auto;
-  /* padding: 2px;
-  width: 70%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-content: center; */
-}
+  #new-post a {
+    
+    margin: 10px auto;
+    /* padding: 2px;
+    width: 70%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-content: center; */
+  }
 
-.edit-my-account button {
-  
-  margin: 10px auto;
-  padding: 2px;
-  width: 30%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-content: center;
-}
+  .edit-my-account button {
+    
+    margin: 10px auto;
+    padding: 2px;
+    width: 30%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-content: center;
+  }
 
+  .my-account button {
+    grid-column: 2 / 3;
+    margin: 10px;
+    padding: 2px;
+    width: 55%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: left;
+  }
 
-
-/* .button-group {
-  display: flex;
-  flex-direction: row;
-  grid-column: 1;
-  text-align: center;
-  margin: 10px;
-} */
-
-.my-account button {
-  grid-column: 2 / 3;
-  margin: 10px;
-  padding: 2px;
-  width: 55%;
-  border-radius: 18px;
-  box-shadow: 10px 10px;
-  justify-self: left;
-}
-
-.my-account label {
-  grid-column: 1 / 2;
-  color: white;
-  justify-self: right;
-  margin: 10px;
-  /* background-color: turquoise; */
-  padding: 2px;
-  /* text-align: right; */
-
-}
+  .my-account label {
+    grid-column: 1 / 2;
+    justify-self: right;
+    margin: 10px;
+    padding: 2px;
+  }
 
 
-.my-account textarea {
-  grid-column: 1;
-  margin: 10px;
-  height: 150px;
-  width: 90%;
-  padding: 2px;
-  resize: none;
-  border-radius: 18px;
-}
+  .my-account textarea {
+    grid-column: 1;
+    margin: 10px;
+    height: 150px;
+    width: 90%;
+    padding: 2px;
+    resize: none;
+    border-radius: 18px;
+  }
 
-.my-account textarea {
-  grid-column: 1;
-  margin: 10px;
-  height: 150px;
-  width: 90%;
-  padding: 2px;
-  resize: none;
-  border-radius: 18px;
-}
+  .my-account textarea {
+    grid-column: 1;
+    margin: 10px;
+    height: 150px;
+    width: 90%;
+    padding: 2px;
+    resize: none;
+    border-radius: 18px;
+  }
 
 
 /* category select */
@@ -869,18 +1092,184 @@ heading {
 
 .category-select label {
   grid-column: 1 / 2;
-  color: white;
-
   justify-self: right;
   margin: 10px;
-  /* background-color: turquoise; */
   padding: 2px;
 }
 
 
+/* Jobs Posts Page */
+  .jobs-by-category {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 5%;
+  }
+
+  .jobs-by-category h1 {
+
+    margin: 0 20px;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 0 10px 0;
+    font-weight: 700;
+
+  }
+  .jobs-by-category h2 {
+
+    margin: 0 20px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 700;
+
+  }
+
+  .jobs-by-category button {
+    
+    margin: 10px;
+    padding: 2px;
+    width: 30%;
+    border-radius: 18px;
+    box-shadow: 10px 10px;
+    justify-self: center;
+  }
+
+  .jobs-by-category label {
+    align-self: left;
+    text-align: left;
+    padding: 2px;
+    font-weight: 700;
+    width: 50%;
+
+  }
+
+  .jobs-by-category-border {
+    margin: 20px 20%;
+    padding-top: 30px;
+    border-radius: 18px;
+    border-color: white;
+    border: 3px solid white ;
+    box-shadow: 10px 10px black;
+  }
 
 
-  
+
+/* New Posts Page   */
+.new-post {
+  margin: 40px
+}
+
+.new-post label {
+  font-size: 20px;
+  font-weight:700;
+  margin: 20px;
+}
+.new-post h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.category-select jobs {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 20px; 
+}
+
+/* category select for New Posts Page */
+.category-select {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  margin: 12px;
+}
+.category-select button {
+  grid-column: 3;
+  margin: 10px;
+  padding: 2px;
+  width: 40%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-self: left;
+}
+.category-form-select {
+  position: relative;
+  grid-column: 2 / 3;
+}
+
+.category-form-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: white;
 }
 
 
+.category-select label {
+  grid-column: 1 / 2;
+  color: white;
+
+  justify-self: right;
+  margin: 10px;
+
+}
+/* New Posts Page   */
+.new-post-base {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.new-post-base button {
+  grid-column: 2 / 3;
+  margin: 10px;
+  padding: 2px;
+  width: 40%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-self: center;
+}
+
+.new-post-base input {
+  margin: 10px 0;
+  grid-column: 2 / 3;
+  width: 40%;
+  padding: 2px;
+  border-radius: 18px;
+  height: 30px;
+}
+
+.new-post {
+  margin: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.new-post label {
+  font-size: 20px;
+  font-weight:700;
+  padding: 0;
+  text-align: center;
+}
+.new-post h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  align-self: left;
+}
+
+.new-post-base label{
+  margin: 2px;
+  position: relative;
+  grid-column: 1 / 2;
+}
+
+/* BUG - Way too big */
+.new-post-base-select {
+  position: relative;
+  grid-column: 2 / 3;
+  height:20px;
+  line-height: 80%;
+  margin-top: 40px;
+}
+
+}

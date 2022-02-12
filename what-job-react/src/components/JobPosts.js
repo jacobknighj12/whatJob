@@ -44,9 +44,6 @@ export function JobPosts() {
         <form ><div class="category-select">
           <label >Choose a field:</label>
 
-
-
-          
           <select onChange={handleCategory} value={selectedCategory} id="Jobs" name="Jobs" size="1">
             {categories.map((category) => (
               <option key={category.id} value={category.id}>{category.name}</option>
@@ -54,54 +51,51 @@ export function JobPosts() {
             }
           </select></div>
         </form>
-        <h1>Category Name</h1>
+        
+        
+        
+        <div className="jobs-by-category"><h1>Category Name</h1>
         <h2>Role Title</h2>
         <div>
-          <div>
+          
             {
               posts.map((post) => (
                 <div key={post.id}>
                   {(() => {
                     if (post.category_id == selectedCategory) {
                       return (
-                        <div>
-                          <div>
-                            User: {post.user_id}
-                          </div><div>
-                            Title: {post.title}
-                          </div><div>
-                            Introduction: {post.intro}
-                          </div><div>
-                            Day to day: {post.day_to_day}
-                          </div><div>
-                            Job difficulty: {post.difficulty}/10
-                          </div><div>
-                            Expected salary range from: {post.expected_salary_range_from} to: {post.expected_salary_range_to}
-                          </div><div>
-                            Industry growth: {post.industry_growth}
-                          </div><div>
-                            Work life balance: {post.work_life_balance}
-                          </div><div>
-                          </div><div>
-                            Career Path: {post.career_path}
-                          </div><div>
-                            good post: {post.upvotes}
-                          </div><div>
-                            bad post: {post.downvotes}
-                          </div>
-                          <button><a href="/">Link to Deep Dive</a></button>
+                        <border className='jobs-by-category-border'>
+                        <post className='jobs-by-category'>
+                          <p><label>User:</label> {post.user_id}</p>
+                          <p><label>Title:</label> {post.title}</p>
+                          <p><label>Introduction:</label> {post.intro}</p>
+                          <p><label>Day to day:</label> {post.day_to_day}</p>
+                          <p><label>Job difficulty: {post.difficulty}/10</label></p>
+                          <p><label>
+                            Expected salary range</label> from: {post.expected_salary_range_from} to: {post.expected_salary_range_to}</p>
+                            <p><label>Industry growth:</label> {post.industry_growth}</p>
+                            <p><label>
+                            Work life balance:</label> {post.work_life_balance}</p>
+                            <p><label>Career Path:</label> {post.career_path}</p>
+                            <p><label>
+                            good post:</label> {post.upvotes}</p>
+                            
+                            <p><label>
+                            bad post:</label> {post.downvotes}</p>
+                          
+                            <button><a href="/">Link to Deep Dive</a></button>
                           <div> _</div>
-                        </div>)
+                        </post></border>)
                     }
                   })()}
                 </div>
 
               ))
             }
-          </div>
+          
         </div>
-      </div>
-      <div>
+      
+      <div className="jobs-by-category">
         <button onClick={handleIncrementLikes}>(Bootstrap thumbs up)</button>
         <h5>Count is {likes}</h5>
         <button onClick={handleIncrementDisLikes}>(Bootstrap thumbs up)</button>
@@ -110,6 +104,8 @@ export function JobPosts() {
       <button onClick={() => setLikes(0)}></button>
       <div></div>
       <button onClick={() => setDisLikes(0)}></button>
+      </div>
+      </div>
     </>
   );
 }
