@@ -7,11 +7,6 @@ export async function getContactMessages() {
   console.log(response);
 }
 
-// export async function sendMessage() {
-//   const response = await WhatJobRailsAPI.post("/api/contactmessage", data);
-//   console.log(response.data);
-// }
-
 export function ContactUs(props) {
   const [values, setValues] = useState({
     name: "",
@@ -62,24 +57,39 @@ export function ContactUs(props) {
 
   return (
     <>
-      <form className='login-signup' onSubmit={handleSubmit}>
+      <form className="login-signup" onSubmit={handleSubmit}>
         <div>
-          <label name="name">Name</label>
-          <input name="name" value={values.name} onChange={handleNameChange} />
+          <label htmlFor="Name" name="Name">
+            Name
+          </label>
+          <input
+            type="text"
+            id="Name"
+            name="Name"
+            value={values.name}
+            onChange={handleNameChange}
+          />
         </div>
         <div>
-          <label name="email">Email</label>
+          <label htmlFor="Email" name="Email">
+            Email
+          </label>
           <input
-            name="email"
+            type="email"
+            id="Email"
+            name="Email"
             value={values.email}
             onChange={handleEmailChange}
           />
         </div>
         <div>
-          <label htmlFor="message">message</label>
+          <label htmlFor="Message" name="Message">
+            Message
+          </label>
           <textarea
-            id="message"
-            name="message"
+            type="message"
+            id="Message"
+            name="Message"
             value={values.message}
             onChange={handleMessageChange}
           />
@@ -87,7 +97,7 @@ export function ContactUs(props) {
         <div>
           <button> Submit </button>
         </div>
-      </form >
+      </form>
     </>
   );
 }
