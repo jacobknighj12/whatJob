@@ -1,3 +1,8 @@
+:root {
+  /* :root is a clever way of saying "the outer-most element" */
+  --category-image: 31; /* the default */
+}
+
 .App {
   background-color: #282c34;
   min-height: 100vh;
@@ -8,9 +13,6 @@
   font-size: calc(10px + 2vmin);
   color: white; */
 }
-
-
-
 
 /* default is mobile */
 .nav{
@@ -46,7 +48,7 @@
 }
 
 /* Page Heading */
-.heading {
+heading {
   text-align: center;
   font-size: 30px;
   padding: 20px;
@@ -58,6 +60,7 @@
 .introduction {
   text-align: center;
   padding: 30px;
+  color: white;
 }
 
 .introduction-buttons {
@@ -82,12 +85,12 @@
   box-shadow: 10px 10px;
 }
 
-/* Login-signup */
+/* standard-form */
 
-.login-signup form {
+.standard-form form {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0 50px 0 50px;
+  /* padding: 0 50px 0 50px; */
 }
 
 .standard-form input {
@@ -100,13 +103,13 @@
 
 }
 
-.button-group {
-  /* display: flex;
-  flex-direction: row; */
+/* .button-group {
+  display: flex;
+  flex-direction: row;
   grid-column: 1;
   text-align: center;
   margin: 10px;
-}
+} */
 
 .standard-form button {
   margin: 10px;
@@ -114,10 +117,10 @@
   width: 40%;
   border-radius: 18px;
   box-shadow: 10px 10px;
-
+  justify-self: center;
 }
 
-.login-signup label {
+.standard-form label {
   color: white;
   display: flex;
   flex-direction: row;
@@ -126,6 +129,238 @@
   padding: 2px;
   justify-self: center;
 }
+
+
+.standard-form textarea {
+  grid-column: 1;
+  margin: 10px;
+  height: 150px;
+  width: 90%;
+  padding: 2px;
+  resize: none;
+  border-radius: 18px;
+}
+
+
+
+
+/* My Account */
+
+.my-account {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 30px;
+  /* padding: 0 50px 0 50px; */
+}
+
+.my-account input {
+  
+  grid-column: 1;
+  width: 90%;
+  padding: 2px;
+  grid-column: 1 / 2;
+  border-radius: 18px;
+
+}
+
+.edit-my-account
+{
+  text-align: center
+}
+
+#new-post a {
+  
+  margin: 10px auto;
+  /* padding: 2px;
+  width: 70%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-content: center; */
+}
+
+.edit-my-account button {
+  
+  margin: 10px auto;
+  padding: 2px;
+  width: 70%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-content: center;
+}
+
+
+
+/* .button-group {
+  display: flex;
+  flex-direction: row;
+  grid-column: 1;
+  text-align: center;
+  margin: 10px;
+} */
+
+.my-account button {
+  grid-column: 2 / 3;
+  margin: 10px;
+  padding: 2px;
+  width: 90%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-self: center;
+}
+
+.my-account label {
+  grid-column: 1 / 2;
+  color: white;
+  margin: 10px;
+  /* background-color: turquoise; */
+  padding: 2px;
+  justify-self: center;
+}
+
+
+.my-account textarea {
+  grid-column: 1;
+  margin: 10px;
+  height: 150px;
+  width: 90%;
+  padding: 2px;
+  resize: none;
+  border-radius: 18px;
+}
+
+.my-account textarea {
+  grid-column: 1;
+  margin: 10px;
+  height: 150px;
+  width: 90%;
+  padding: 2px;
+  resize: none;
+  border-radius: 18px;
+}
+
+
+
+
+/* deep-dive */
+.deep-dive{
+  text-align: left;
+  padding: 0 30px;
+  color: white;
+}
+.deep-dive button {
+  align-self: center;
+  text-align: center;
+  padding: 2px;
+
+  width: 50%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+}
+.deep-dive p {
+  text-align: left;
+  line-height: 40px;
+  color: white;
+}
+.deep-dive label {
+  align-self: center;
+  text-align: center;
+  padding: 2px;
+  font-weight: 700;
+  width: 50%;
+
+}
+
+
+
+/* category select */
+.category-select {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 20px;
+  
+
+}
+.category-select button {
+  grid-column: 1;
+  margin: 10px;
+  padding: 2px;
+  width: 40%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-self: center;
+}
+.category-form-select {
+  position: relative;
+  grid-column: 1;
+}
+
+.category-form-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: white;
+}
+
+
+.category-select label {
+  grid-column: 1;
+  color: white;
+
+  justify-self: center;
+  margin: 10px;
+  /* background-color: turquoise; */
+  padding: 2px;
+}
+
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: rgb(16, 54, 92);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
 
 /* Tablet */
 @media screen and (min-width: 650px) and (max-width:1023px) {
@@ -167,13 +402,13 @@
 
 /* signup and login form */
 
-  .login-signup form {
+  .standard-form form {
     display: grid;
     grid-template-columns: 200px 1fr;
     padding: 0 50px 0 50px;
   }
   
-  .login-signup input {
+  .standard-form input {
     margin: 10px;
     grid-column: 2 / 2;
     /* /* margin: 30px; */
@@ -191,7 +426,7 @@
   
   }
   
-  .login-signup button {
+  .standard-form button {
     margin: 10px;
     align-self: center;
     text-align: center;
@@ -200,10 +435,10 @@
     width: 150px;
     border-radius: 18px;
     box-shadow: 10px 10px;
-  
+    justify-self: center;
   }
   
-  .login-signup label {
+  .standard-form label {
     grid-column: 1 / 2;
     color: white;
     display: flex;
@@ -216,9 +451,160 @@
     width: 100px;
   
   }
+  .standard-form textarea {
+    margin: 10px;
+    grid-column: 2 / 3;
+    height: 150px;
+    width: 400px;
+    padding: 2px;
+    resize: none;
+    border-radius: 18px;
 }
 
-/* Desktop - Still in beta */
+
+
+/* My Account */
+
+.my-account {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 100px;
+  /* padding: 0 50px 0 50px; */
+}
+
+.my-account input {
+  
+  grid-column: 1;
+  width: 90%;
+  padding: 2px;
+  grid-column: 1 / 2;
+  border-radius: 18px;
+
+}
+
+.edit-my-account
+{
+  text-align: center
+}
+
+#new-post a {
+  
+  margin: 10px auto;
+  /* padding: 2px;
+  width: 70%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-content: center; */
+}
+
+.edit-my-account button {
+  
+  margin: 10px auto;
+  padding: 2px;
+  width: 40%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-content: center;
+}
+
+
+
+/* .button-group {
+  display: flex;
+  flex-direction: row;
+  grid-column: 1;
+  text-align: center;
+  margin: 10px;
+} */
+
+.my-account button {
+  grid-column: 2 / 3;
+  margin: 10px;
+  padding: 2px;
+  width: 80%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-self: center;
+}
+
+.my-account label {
+  grid-column: 1 / 2;
+  color: white;
+  justify-self: right;
+  margin: 10px;
+  /* background-color: turquoise; */
+  padding: 2px;
+  /* text-align: right; */
+
+}
+
+
+.my-account textarea {
+  grid-column: 1;
+  margin: 10px;
+  height: 150px;
+  width: 90%;
+  padding: 2px;
+  resize: none;
+  border-radius: 18px;
+}
+
+.my-account textarea {
+  grid-column: 1;
+  margin: 10px;
+  height: 150px;
+  width: 90%;
+  padding: 2px;
+  resize: none;
+  border-radius: 18px;
+}
+
+/* category select */
+.category-select {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 20px;
+  
+
+}
+.category-select button {
+  grid-column: 3;
+  margin: 10px;
+  padding: 2px;
+  width: 40%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-self: left;
+}
+.category-form-select {
+  position: relative;
+  grid-column: 2 / 3;
+}
+
+.category-form-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: white;
+}
+
+
+.category-select label {
+  grid-column: 1 / 2;
+  color: white;
+
+  justify-self: right;
+  margin: 10px;
+  /* background-color: turquoise; */
+  padding: 2px;
+}
+
+
+
+
+}
+/* Desktop*/
 @media screen and (min-width: 1024px) {
   .nav{
     text-decoration: none;
@@ -292,15 +678,15 @@
     box-shadow: 10px 10px;
   }
 /* signup and login form */
-  .login-signup form {
+  .standard-form form {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 0 50px 0 50px;
   }
   
-  .login-signup input {
+  .standard-form input {
     margin: 10px;
-    grid-column: 2 / 2;
+    grid-column: 2 / 3;
 
     width: 400px;
     padding: 2px;
@@ -309,39 +695,192 @@
 
   }
   
-  .button-group {
+  /* .button-group {
     display: flex;
     flex-direction: row;
     grid-column: 2;
   
-  }
+  } */
   
-  .login-signup button {
+  .standard-form button {
     margin: 10px;
     align-self: center;
     text-align: center;
     padding: 2px;
-    
+    text-decoration: none;
     width: 150px;
     border-radius: 18px;
     box-shadow: 10px 10px;
-  
+    grid-column: 2 / 3;
   }
   
-  .login-signup label {
+  .standard-form label {
     grid-column: 1 / 2;
     color: white;
     display: flex;
     flex-direction: row;
     margin: 10px;
     /* background-color: turquoise; */
-    text-align: right;
+    /* text-align: right; */
     padding: 2px;
-    justify-self: end;
+    place-self: right;
     width: 100px;
   
   }
+  .standard-form textarea {
+    margin: 10px;
+    grid-column: 2 / 3;
+    height: 150px;
+    width: 400px;
+    padding: 2px;
+    resize: none;
+    border-radius: 18px;
 
+  }
+
+
+/* My Account */
+
+.my-account {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 25%;
+  /* padding: 0 50px 0 50px; */
+}
+
+.my-account input {
+  
+  grid-column: 1;
+  width: 90%;
+  padding: 2px;
+  grid-column: 1 / 2;
+  border-radius: 18px;
+
+}
+
+.edit-my-account
+{
+  text-align: center
+}
+
+#new-post a {
+  
+  margin: 10px auto;
+  /* padding: 2px;
+  width: 70%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-content: center; */
+}
+
+.edit-my-account button {
+  
+  margin: 10px auto;
+  padding: 2px;
+  width: 30%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-content: center;
+}
+
+
+
+/* .button-group {
+  display: flex;
+  flex-direction: row;
+  grid-column: 1;
+  text-align: center;
+  margin: 10px;
+} */
+
+.my-account button {
+  grid-column: 2 / 3;
+  margin: 10px;
+  padding: 2px;
+  width: 55%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-self: left;
+}
+
+.my-account label {
+  grid-column: 1 / 2;
+  color: white;
+  justify-self: right;
+  margin: 10px;
+  /* background-color: turquoise; */
+  padding: 2px;
+  /* text-align: right; */
+
+}
+
+
+.my-account textarea {
+  grid-column: 1;
+  margin: 10px;
+  height: 150px;
+  width: 90%;
+  padding: 2px;
+  resize: none;
+  border-radius: 18px;
+}
+
+.my-account textarea {
+  grid-column: 1;
+  margin: 10px;
+  height: 150px;
+  width: 90%;
+  padding: 2px;
+  resize: none;
+  border-radius: 18px;
+}
+
+
+/* category select */
+.category-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 12px;
+  
+
+}
+.category-select button {
+  grid-column: 3;
+  margin: 10px;
+  padding: 2px;
+  width: 40%;
+  border-radius: 18px;
+  box-shadow: 10px 10px;
+  justify-self: left;
+}
+.category-form-select {
+  position: relative;
+  grid-column: 2 / 3;
+}
+
+.category-form-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: white;
+}
+
+
+.category-select label {
+  grid-column: 1 / 2;
+  color: white;
+
+  justify-self: right;
+  margin: 10px;
+  /* background-color: turquoise; */
+  padding: 2px;
+}
+
+
+
+
+  
 }
 
 

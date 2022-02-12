@@ -10,7 +10,13 @@ export function JobPosts() {
   useEffect(() => {
     axios.get("http://localhost:3000/api/posts").then((res) => setPosts(res.data));
     axios.get("http://localhost:3000/api/categories").then((res) => setCategories(res.data));
-    setSelectedCategory(localStorage.getItem('selectedCategory'));
+
+
+
+    // setSelectedCategory(localStorage.getItem('selectedCategory'));
+    // selectedCategory.addEventListener('change', function(){
+    //   footer.style.setProperty('--category-image', setCategories)
+    // })
   }, []);
 
   const handleIncrementLikes = () => {
@@ -28,17 +34,25 @@ export function JobPosts() {
     console.log(localStorage.getItem('selectedCategory'));
   }
 
+
+  
   return (
     <>
+      <heading>Job Posts</heading>
+      
       <div>
-        <form >
+        <form ><div class="category-select">
           <label >Choose a field:</label>
+
+
+
+          
           <select onChange={handleCategory} value={selectedCategory} id="Jobs" name="Jobs" size="1">
             {categories.map((category) => (
               <option key={category.id} value={category.id}>{category.name}</option>
             ))
             }
-          </select>
+          </select></div>
         </form>
         <h1>Category Name</h1>
         <h2>Role Title</h2>

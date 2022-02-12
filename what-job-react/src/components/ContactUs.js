@@ -62,20 +62,18 @@ export function ContactUs(props) {
 
   return (
     <>
-      <form className='login-signup' onSubmit={handleSubmit}>
-        <div>
+      <heading>Contact Us</heading>
+      <div className="standard-form">
+      <form onSubmit={handleSubmit}>
+        
           <label name="name">Name</label>
           <input name="name" value={values.name} onChange={handleNameChange} />
-        </div>
-        <div>
           <label name="email">Email</label>
           <input
             name="email"
             value={values.email}
             onChange={handleEmailChange}
           />
-        </div>
-        <div>
           <label htmlFor="message">message</label>
           <textarea
             id="message"
@@ -83,11 +81,10 @@ export function ContactUs(props) {
             value={values.message}
             onChange={handleMessageChange}
           />
-        </div>
-        <div>
           <button> Submit </button>
-        </div>
+        
       </form >
+      </div>
     </>
   );
 }

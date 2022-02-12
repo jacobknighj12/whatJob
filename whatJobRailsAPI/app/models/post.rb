@@ -13,7 +13,8 @@ validates_length_of :role_details, maximum: 2000, message:'Please enter a diffic
 validates_length_of :job_description, maximum: 2000, message:'Please enter a difficulty of less than 11.'
 validates_length_of :work_life_balance, maximum: 300, message:'Please enter a difficulty of less than 11.'
 
-validates_format_of :work_life_balance, :title, :intro, :day_to_day, :job_security, :industry_growth, :work_life_balance, :role_details, :job_description, with: /\A[a-zA-Z0-9 ,.;'"+-?!%$]*(?:\R[a-zA-Z0-9 ,.;'"+-?!%$]*)*\z/
+validates_format_of :work_life_balance, :title, :intro, :day_to_day, :job_security, :industry_growth, :work_life_balance, :role_details, :job_description, with: /./
+# validates_format_of :work_life_balance, :title, :intro, :day_to_day, :job_security, :industry_growth, :work_life_balance, :role_details, :job_description, with: /\A[a-zA-Z0-9 ,.;'"+-?!%$]*(?:\R[a-zA-Z0-9 ,.;'"+-?!%$]*)*\z/
 # validates_format_of :intro, with: /\A[a-zA-Z0-9 ,.;'"+-?!%$]*(?:\R[a-zA-Z0-9 ,.;'"+-?!%$]*)*\z/
 # validates_format_of :day_to_day, with: /\A[a-zA-Z0-9 ,.;'"+-?!%$]*(?:\R[a-zA-Z0-9 ,.;'"+-?!%$]*)*\z/
 # validates_format_of :job_security, with: /\A[a-zA-Z0-9 ,.;'"+-?!%$]*(?:\R[a-zA-Z0-9 ,.;'"+-?!%$]*)*\z/

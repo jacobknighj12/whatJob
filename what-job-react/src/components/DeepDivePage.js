@@ -57,7 +57,7 @@ export function DeepDivePage() {
   return (
     <>
       {posts.map((post) => (
-        <div key={post.id}>
+        <div class key={post.id}>
           {(() => {
             // console.log("post.post_id");
             // console.log(post.id);
@@ -65,26 +65,31 @@ export function DeepDivePage() {
             // console.log(post_id);
             if (post.id === post_id) {
               return (
-                <div>
-                  <div>
+                <div className='deep-dive'>
+                  
+                    <p/><heading>Deep Dive</heading>
                     <h2>Deep dive on: {post.title}</h2>
-                  </div>
-                  <div>By : 'user'{post.user_id}</div>
-                  <div>Job difficulty: {post.difficulty}/10</div>
-                  <div>
-                    Expected salary range from {post.expected_salary_range_from}{" "}
-                    to {post.expected_salary_range_to}
-                  </div>
-                  <div>Deep Dive: {post.role_details}</div>
+                  
+                  <p/><label>By:</label> 'user'{post.user_id}
+                  <p/><label>Job difficulty:</label> {post.difficulty}/10
+                  <p />
+                  <label>Expected salary range from</label> {post.expected_salary_range_from}{" "}
+                  <label>to</label> {post.expected_salary_range_to}
+                  
+                  <p/><label>Deep Dive:</label> {post.role_details}
                   <hr></hr>
-                  <div>{post.job_description}</div>
-                  <div>good post: {post.upvotes}</div>
-                  <div>bad post: {post.downvotes}</div>
+                  <p/><label>Job Description:</label>{post.job_description}
+                  <p/><label>good post:</label> {post.upvotes}
+                  <p/><label>bad post:</label> {post.downvotes}
                   <button>
                     <a>Link to Original post</a>
                   </button>
-                  <div> _</div>
+                  <p/> _
                 </div>
+
+
+
+
               );
             }
           })()}

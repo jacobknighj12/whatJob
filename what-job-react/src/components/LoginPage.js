@@ -38,16 +38,17 @@ export function LoginPage() {
 
         <>
               <heading className="heading">Login</heading>
-            <form onSubmit={handleSubmit} classname='login-signup'>
-                      <div className='standard-form'>
+              <div className='standard-form'>
+            <form onSubmit={handleSubmit} classname='standard-form'>
+                      
                 <label>Email</label>
                 <input type='email' name='email'></input>
                 <label>Password</label>
                 <input type='current-password' name='password'></input>
                 <button><a href='/'>Login</a></button>
-                </div></form>
+                </form>
             <a href='/Signup'>
-                <button>Signup</button></a>
+                <button>Signup</button></a></div>
         </>
 
     )
