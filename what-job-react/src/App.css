@@ -1,6 +1,4 @@
   :root {
-    /* :root is a clever way of saying "the outer-most element" */
-    --category-image: 31; /* the default */
     color: white;
   }
 
@@ -26,7 +24,6 @@
 
   .nav-logo{
     grid-column: 1 / 2;
-    /* grid-template-rows: 1fr; */
     padding: 5% 15% 0% 15%;
     align-self: center;
   }
@@ -34,8 +31,6 @@
   .nav-buttons{
     grid-column: 2 / 2;
     padding: 10% 28% 0px 5%;
-    
-    /* grid-template-rows: 1fr; */
   }
 
 
@@ -68,7 +63,6 @@
     padding: 2px;
     display: flex;
     flex-direction: row;
-    /* width: 50%; */
     border-radius: 18px;
     justify-content: space-evenly;
   }
@@ -89,7 +83,6 @@
   .standard-form form {
     display: grid;
     grid-template-columns: 1fr;
-    /* padding: 0 50px 0 50px; */
   }
 
   .standard-form input {
@@ -134,7 +127,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 30px;
-    /* padding: 0 50px 0 50px; */
   }
 
   .my-account input {
@@ -152,11 +144,6 @@
 
   #new-post a {
     margin: 10px auto;
-    /* padding: 2px;
-    width: 70%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-content: center; */
   }
 
   /* .edit-my-account button {
@@ -180,9 +167,7 @@
 
   .my-account label {
     grid-column: 1 / 2;
-    /* color: white; */
     margin: 10px;
-    /* background-color: turquoise; */
     padding: 2px;
     justify-self: center;
   }
@@ -201,7 +186,6 @@
   .deep-dive{
     text-align: left;
     padding: 0 30px;
-    /* color: white; */
   }
   .deep-dive button {
     align-self: center;
@@ -215,7 +199,6 @@
   .deep-dive p {
     text-align: left;
     line-height: 40px;
-    /* color: white; */
   }
   .deep-dive label {
     align-self: center;
@@ -408,7 +391,7 @@
 
   }
 
-  /* BUG - Way too big */
+ 
   .new-post-base-select {
     position: relative;
     grid-column: 2 / 3;
@@ -473,26 +456,22 @@
     display: flex;
     flex-direction: row;
     grid-column: 2;
-  
-  }
+    }
  
   #signup-button-box {
     display: grid;
     grid-template-columns: 200px 1fr;
-   
-    padding: 0 50px 0 50px;
+   padding: 0 50px 0 50px;
   }
   #signup-button {
     grid-column: 2;
     justify-self: left;
-    
-  }
+    }
 
 
   .standard-form button {
     grid-column: 2 / 3;
     margin: 10px;
-    
     text-align: center;
     padding: 2px;
     width: 200px;
@@ -529,17 +508,14 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 0 100px;
-  /* padding: 0 50px 0 50px; */
-}
+  }
 
 .my-account input {
-  
   grid-column: 1;
   width: 90%;
   padding: 2px;
   grid-column: 1 / 2;
   border-radius: 18px;
-
 }
 
 .edit-my-account
@@ -836,7 +812,7 @@
     grid-column: 1 / 2;
   }
 
-  /* BUG - Way too big */
+ 
   .new-post-base-select {
     position: relative;
     grid-column: 2 / 3;
@@ -851,7 +827,6 @@
     text-decoration: none;
     display: grid;
     grid-template-columns: 200px 1fr;
-    /* grid-template-rows: 1fr 1fr; */
     align-content: center;
     grid-auto-flow: row;
   }
@@ -859,33 +834,26 @@
   
   .nav-logo{
     grid-column: 1 / 2;
-    /* grid-row: 1; */
     padding: 10% 15% 5% 15%;
     align-self: center;
-    /* justify-self: center; */
-  }
+    }
   
   .nav-buttons{
-    /* background-color: tomato; */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    /* grid-column: 1fr 1fr 1fr 1fr; */
     padding: 55px 50px 0px 30px;   
   }
   
   
   .nav button{
     border: steelblue 10px;
-    /* margin: 5px; */
     padding: 15px;
     width: 120px;
     border-radius: 18px;
     box-shadow: 10px 10px;
-    /* align-self: center;
-    justify-self: center; */
-  }
+    }
 
   .introduction {
     text-align: center;
@@ -895,19 +863,11 @@
     padding: 0px 10% 0px 10%;
     margin: 30px;
     padding: 2px;
-    /* display: flex;
-    flex-direction: row; */
-    /* width: 50%; */
     display: grid;
     grid-template-columns: 1fr 1fr;   
     border-radius: 18px;
     column-gap: 30px;
-    /* justify-content: space-between; */
-    /* background-color: tomato; */
-    /* place-items: center; */
-    /* box-align: center;
-    align-items: center */
-  }
+    }
   
   
   .introduction button {
@@ -946,7 +906,6 @@
   
   .standard-form label {
     grid-column: 1 / 2;
-    /* color: white; */
     margin: 10px;
     padding: 2px;
     justify-self: right;
@@ -982,8 +941,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 25%;
-    /* padding: 0 50px 0 50px; */
-  }
+    }
 
   .my-account input {
     
@@ -1003,12 +961,7 @@
   #new-post a {
     
     margin: 10px auto;
-    /* padding: 2px;
-    width: 70%;
-    border-radius: 18px;
-    box-shadow: 10px 10px;
-    justify-content: center; */
-  }
+    }
 
   .edit-my-account button {
     
@@ -1082,7 +1035,7 @@
 }
 
 .category-form-select select {
-  display: none; /*hide original SELECT element: */
+  display: none; 
 }
 
 .select-selected {
@@ -1197,7 +1150,7 @@
 }
 
 .category-form-select select {
-  display: none; /*hide original SELECT element: */
+  display: none; 
 }
 
 .select-selected {
@@ -1263,7 +1216,7 @@
   grid-column: 1 / 2;
 }
 
-/* BUG - Way too big */
+
 .new-post-base-select {
   position: relative;
   grid-column: 2 / 3;
