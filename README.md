@@ -1,5 +1,11 @@
 # whatJob - T3A2 - Full Stack Application
 
+Links to live sites:
+React/Frontend: http://damp-springs-91996.herokuapp.com/
+
+Rails/Backend with posts route example:
+https://whatjobrailsapi.herokuapp.com/api/posts
+
 Jacob Knight - cam022101
 
 Kate Beaumont - cam022111
