@@ -1,5 +1,14 @@
 # whatJob - T3A2 - Full Stack Application
 
+for react front end:
+npm install locally to install packages.
+dependencies should all line up and ensure versions are the same
+npm start to run server locally it is currently configured to talk to the heroku rails backend.
+
+for the rails backend
+bundle install to install all dependencies as with react make sure all versions are correct with the bundled versions and start up with rails s
+all api calls should be available locally
+
 Links to live sites:
 React/Frontend: http://damp-springs-91996.herokuapp.com/
 
