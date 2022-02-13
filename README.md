@@ -16,12 +16,10 @@ The consumers of the content are targeted towards students, primarily high schoo
 
 The contributors of the content are professionals that would like to share their experiences and expertise with said students. There are a lot of people in industry who enjoy mentoring and assisting others with building their career, and this website is a perfect opportunity for them to help others.
 
-
 - Purpose
 
-  The purpose of the website is to provide career guidance for those in mainly primary and high school education. Schools are academically focused and don’t tend to introduce students to the breadth and scope of possible careers. Young people consume more media than ever before, and hear messages that glorify some sectors, but never hear about the downsides of those occupations. In contrast, there are many less ‘glamourous’ roles that many workers may love that don’t get media exposure. At present, there is no way for students to fully explore their work opportunities with proper explanations of all  complexities of each job.
+  The purpose of the website is to provide career guidance for those in mainly primary and high school education. Schools are academically focused and don’t tend to introduce students to the breadth and scope of possible careers. Young people consume more media than ever before, and hear messages that glorify some sectors, but never hear about the downsides of those occupations. In contrast, there are many less ‘glamourous’ roles that many workers may love that don’t get media exposure. At present, there is no way for students to fully explore their work opportunities with proper explanations of all complexities of each job.
   The content is to be written by way of separate posts by professionals in each field. These posts will be sorted through categories to allow ease of access and useability to encourage use and exploration of different avenues.
-
 
 - Functionality / features
 
@@ -41,7 +39,6 @@ The contributors of the content are professionals that would like to share their
             Job Description
         Rating
 
-
   These posts will be organized by way of categories. The categories will be drawn from other job search websites.
   The posts can be up-voted and down-voted by logged in users, ordering by way of most up-voted post to show those seeking information about a particular occupation the most relevant posts.
   There will also be a report feature to send a message to the website administrator for posts which will enable reporting by logged in users.
@@ -58,11 +55,7 @@ The contributors of the content are professionals that would like to share their
 
   Heroku
 
-  Netlify
-
   Bootstrap
-
-  AWS S3 image hosting
 
 ### R2 Dataflow Diagram
 
@@ -75,13 +68,13 @@ DFD Level 2 Selective Diagrams
 
 ### R3 Application Architecture Diagram
 
-![Application Architecture Diagram](./docs/ApplicationArchitectureDiagram.png)
+![Application Architecture Diagram](./docs/ApplicationArchitectureDiagram2.png)
 
 ### R4 User Stories
 
 The user stories for this project were showing our way of implementing the Agile
 Methodology using Trello, dates, difficulties, assigning each card, with each card
-having a full user story for it and having requirements for each card to be moved between 
+having a full user story for it and having requirements for each card to be moved between
 sections and having daily standups at 2.00PM after classes as well as general discussion on any
 details that needed ironing out.
 
@@ -193,7 +186,7 @@ Figure 28. Tablet and Mobile version of new Deep Dive page
     Throughout the planning phase we were constantly aware that our scope must be limited
     and were adding cards from a joint google document that we had drafts of that were, added in or
     excluded for extra content if we have time for it.
-    As the method was gradually introduced it was further and further implemented in each of the cards 
+    As the method was gradually introduced it was further and further implemented in each of the cards
     with more details being added like the fibonacci difficulties and dates.
 
 ![Picture](./docs/1.JPG)
